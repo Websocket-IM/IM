@@ -3,12 +3,17 @@ package utils
 import (
 	"fmt"
 	"ginchat/common"
+	"ginchat/model"
 	"github.com/spf13/viper"
 	"go.uber.org/zap"
 	"go.uber.org/zap/zapcore"
 	"gopkg.in/natefinch/lumberjack.v2"
+	"gorm.io/driver/mysql"
+	"gorm.io/gorm"
+	"gorm.io/gorm/logger"
 	"net/http"
 	"os"
+	"time"
 )
 
 // viper设置配置文件
@@ -26,7 +31,7 @@ func InitConfig() {
 
 func GetLogWriter() zapcore.WriteSyncer {
 	lumberJackLogger := &lumberjack.Logger{
-		Filename:   "./test.log",
+		Filename:   "./log/test.log",
 		MaxSize:    10,
 		MaxBackups: 5,
 		MaxAge:     30,
@@ -60,6 +65,8 @@ func InitLogger() {
 	defer common.SugarLogger.Sync()
 	SimpleHttpGet("www.sogo.com")
 	SimpleHttpGet("http://www.sogo.com")
+	//SimpleHttpGet("http://localhost:6060/")
+
 }
 
 func GetEncoder() zapcore.Encoder {
@@ -78,4 +85,28 @@ func SimpleHttpGet(url string) {
 		common.SugarLogger.Infof("Success! statusCode = %s for URL %s", resp.Status, url)
 		resp.Body.Close()
 	}
+}
+
+// mysql初始化
+func InitMysql() {
+
+	db, err := gorm.Open(mysql.Open(viper.GetString("mysql.dns")),
+		&gorm.Config{
+			Logger: logger.New(
+				zap.NewStdLog(common.SugarLogger.Desugar()), //设置zap日志记录器
+				logger.Config{
+					SlowThreshold: time.Second, //慢SQL阈值
+					LogLevel:      logger.Info, //级别
+					Colorful:      true,        //彩色
+				},
+			),
+		})
+	if err != nil {
+		panic("连接mysql数据库失败, error=" + err.Error())
+	} else {
+		fmt.Println("连接mysql数据库成功")
+	}
+	// 迁移 schema
+	db.AutoMigrate(&model.User{})
+	common.DB = db
 }
