@@ -5,6 +5,7 @@ import (
 	"ginchat/service"
 	"ginchat/utils"
 	"github.com/gin-gonic/gin"
+	"strconv"
 )
 
 // 展示用户列表
@@ -36,5 +37,21 @@ func CreateUser(c *gin.Context) {
 		return
 	}
 	utils.JSON(c, 200, "success!", rep)
+
+}
+
+// 删除用户
+func DeleteUser(c *gin.Context) {
+	uid, _ := strconv.Atoi(c.Query("id"))
+	user := model.User{}
+	user.ID = uint(uid)
+	err := service.DeleteUser(&user)
+	if err != nil {
+		utils.JSON(c, 404, "error", err)
+		return
+	}
+	utils.JSON(c, 200, "success!", "删除用户成功")
+}
+func UpadateUser() {
 
 }

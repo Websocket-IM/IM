@@ -27,3 +27,17 @@ func CreateUser(user *model.RegisterUserReq) error {
 	}
 	return nil
 }
+
+// 删除用户
+func DeleteUser(user *model.User) error {
+	if err := dao.DeleteUser(user); err != nil {
+		common.SugarLogger.Error("删除用户错误，err: %v", err.Error())
+		return err
+	}
+	return nil
+}
+
+// 修改用户资料
+func UpadateUser() {
+
+}

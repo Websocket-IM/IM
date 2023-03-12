@@ -35,3 +35,21 @@ func CreateUser(rep *model.RegisterUserReq) error {
 	}
 	return nil
 }
+
+// 删除用户
+func DeleteUser(user *model.User) error {
+	res := common.DB.Delete(user)
+	if res.Error != nil {
+		return res.Error
+	}
+	return nil
+}
+
+// 修改用户资料
+func UpadateUser(user *model.User) error {
+	res := common.DB.Model(user).Updates(user)
+	if res.Error != nil {
+		return res.Error
+	}
+	return nil
+}

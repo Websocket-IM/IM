@@ -29,3 +29,11 @@ type RegisterUserReq struct {
 	Password   string `form:"password" json:"password"   comment:"密码" validate:"required,min=6,max=20"`
 	RePassword string `form:"repassword" json:"repassword"  comment:"确认密码" validate:"required,eqfield=Password"`
 }
+
+// 更新用户资料
+type UpadateUserRep struct {
+	ID     uint   `gorm:"primarykey"`
+	Phone  string `valid:"matches(^1[3-9]{1}\\d{9}$)"`
+	Email  string `valid:"email"`
+	Avatar string //头像
+}
