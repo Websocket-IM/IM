@@ -38,6 +38,13 @@ func DeleteUser(user *model.User) error {
 }
 
 // 修改用户资料
-func UpadateUser() {
+func UpadateUser(user *model.UpadateUserRep) error {
+	fmt.Println(555555)
+	if err := dao.UpadateUser(user); err != nil {
+		common.SugarLogger.Error("修改用户资料错误： %v", err.Error())
+		fmt.Println(err)
+		return err
+	}
 
+	return nil
 }

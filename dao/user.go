@@ -23,6 +23,7 @@ func CreateUser(rep *model.RegisterUserReq) error {
 	salt := fmt.Sprintf("%08d", rand.Int31())
 	user := model.User{
 		Username:      rep.Username,
+		Nickname:      utils.RandNickname(),
 		Password:      utils.Md5Password(rep.Password, salt),
 		Salt:          salt,
 		LoginTime:     time.Now(),
@@ -38,7 +39,8 @@ func CreateUser(rep *model.RegisterUserReq) error {
 
 // 删除用户
 func DeleteUser(user *model.User) error {
-	res := common.DB.Delete(user)
+	res := common.DB.Delete(user, "id = ?", user.ID)
+	fmt.Println(user.ID)
 	if res.Error != nil {
 		return res.Error
 	}
@@ -46,10 +48,12 @@ func DeleteUser(user *model.User) error {
 }
 
 // 修改用户资料
-func UpadateUser(user *model.User) error {
-	res := common.DB.Model(user).Updates(user)
+func UpadateUser(user *model.UpadateUserRep) error {
+	fmt.Println(6666)
+	res := common.DB.Model(&model.User{}).Where("id = ?", user.ID).Updates(model.User{Nickname: user.Nickname, Phone: user.Phone, Email: user.Email, Avatar: user.Avatar})
 	if res.Error != nil {
 		return res.Error
 	}
+	fmt.Println(2222)
 	return nil
 }

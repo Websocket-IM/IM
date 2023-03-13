@@ -1,6 +1,7 @@
 package api
 
 import (
+	"fmt"
 	"ginchat/model"
 	"ginchat/service"
 	"ginchat/utils"
@@ -47,11 +48,26 @@ func DeleteUser(c *gin.Context) {
 	user.ID = uint(uid)
 	err := service.DeleteUser(&user)
 	if err != nil {
-		utils.JSON(c, 404, "error", err)
+		utils.JSON(c, 404, "error!", err)
 		return
 	}
 	utils.JSON(c, 200, "success!", "删除用户成功")
 }
-func UpadateUser() {
+
+// 更新用户资料
+func UpadateUser(c *gin.Context) {
+	user := model.UpadateUserRep{}
+	if err := utils.DefaultGetValidParams(c, &user); err != nil {
+		utils.JSON(c, 404, "error!", err)
+		return
+	}
+	fmt.Println("upadatuser:   ", user)
+
+	err := service.UpadateUser(&user)
+	if err != nil {
+		utils.JSON(c, 404, "error!", err)
+		return
+	}
+	utils.JSON(c, 200, "success!", "更新用户资料成功")
 
 }

@@ -49,7 +49,7 @@ func TransInit(c *gin.Context) {
 
 func DefaultGetValidParams(c *gin.Context, params interface{}) error {
 	TransInit(c)
-	c.ShouldBind(params)
+	c.ShouldBindJSON(params)
 	//获取验证器
 	val, _ := c.Get(ValidatorKey)
 	valid, _ := val.(*validator.Validate)
