@@ -15,5 +15,6 @@ func main() {
 	// mysql初始化
 	utils.InitMysql()
 	// redis初始化
+	utils.InitRedis()
 	r.Run(":6060")
 }

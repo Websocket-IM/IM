@@ -48,3 +48,33 @@ func UpadateUser(user *model.UpadateUserRep) error {
 
 	return nil
 }
+
+// 通过字段查询用户
+func FindBy(field string, value interface{}) ([]model.User, error) {
+	users, err := dao.FindBy(field, value)
+	if err != nil {
+		common.SugarLogger.Error("查询用户%v错误： %v", field, err)
+		fmt.Println(err)
+		return nil, err
+	}
+	return users, nil
+}
+
+// 用户登录
+func LoginUser(rep *model.LoginUserRep) error {
+	if err := dao.LoginUser(rep); err != nil {
+		common.SugarLogger.Error("用户登录错误，err:%v", err)
+		return err
+	}
+	return nil
+}
+
+// 手机号验证码登录
+func LoginByPhoneCode(phoneCode *model.LoginByPhoneCode) (model.User, error) {
+	err, user := dao.LoginByPhoneCode(phoneCode)
+	if err != nil {
+		common.SugarLogger.Error("用户短信验证错误，err:%v", err)
+		return model.User{}, err
+	}
+	return user, nil
+}

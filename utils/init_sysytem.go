@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"ginchat/common"
 	"ginchat/model"
+	"github.com/redis/go-redis/v9"
 	"github.com/spf13/viper"
 	"go.uber.org/zap"
 	"go.uber.org/zap/zapcore"
@@ -109,4 +110,15 @@ func InitMysql() {
 	// 迁移 schema
 	db.AutoMigrate(&model.User{})
 	common.DB = db
+}
+
+// redis初始化
+func InitRedis() {
+	common.RDB = redis.NewClient(&redis.Options{
+		Addr:         viper.GetString("redis.addr"),
+		Password:     viper.GetString("redis.password"),
+		DB:           viper.GetInt("redis.DB"),
+		PoolSize:     viper.GetInt("redis.poolSize"),
+		MinIdleConns: viper.GetInt("redis.minIdleConn"),
+	})
 }
