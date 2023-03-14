@@ -49,14 +49,17 @@ func TransInit(c *gin.Context) {
 
 func DefaultGetValidParams(c *gin.Context, params interface{}) error {
 	TransInit(c)
-	c.ShouldBindJSON(params)
+	err := c.ShouldBindJSON(params)
+	if err != nil {
+		return err
+	}
 	//获取验证器
 	val, _ := c.Get(ValidatorKey)
 	valid, _ := val.(*validator.Validate)
 	//获取翻译器
 	tran, _ := c.Get(TranslatorKey)
 	trans, _ := tran.(ut.Translator)
-	err := valid.Struct(params)
+	err = valid.Struct(params)
 	//如果数据效验不通过，则将所有err以切片形式输出
 	if err != nil {
 		errs := err.(validator.ValidationErrors)

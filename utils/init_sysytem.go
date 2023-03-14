@@ -13,7 +13,6 @@ import (
 	"gorm.io/gorm"
 	"gorm.io/gorm/logger"
 	"net/http"
-	"os"
 	"time"
 )
 
@@ -52,22 +51,15 @@ func GetLogWriter() zapcore.WriteSyncer {
 // }
 
 func InitLogger() {
-	// 打印到日志和终端
-	consoleEncoder := zapcore.NewConsoleEncoder(zap.NewDevelopmentEncoderConfig())
-	consoleDebugging := zapcore.Lock(os.Stdout)
-	consoleCore := zapcore.NewCore(consoleEncoder, consoleDebugging, zapcore.DebugLevel)
-
-	writeSyncer := zapcore.NewMultiWriteSyncer(consoleDebugging, GetLogWriter())
+	writeSyncer := GetLogWriter()
 	encoder := GetEncoder()
 	core := zapcore.NewCore(encoder, writeSyncer, zapcore.DebugLevel)
 
-	logger := zap.New(zapcore.NewTee(consoleCore, core), zap.AddCaller())
+	logger := zap.New(core, zap.AddCaller())
 	common.SugarLogger = logger.Sugar()
 	defer common.SugarLogger.Sync()
 	SimpleHttpGet("www.sogo.com")
 	SimpleHttpGet("http://www.sogo.com")
-	//SimpleHttpGet("http://localhost:6060/")
-
 }
 
 func GetEncoder() zapcore.Encoder {

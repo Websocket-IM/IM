@@ -1,14 +1,14 @@
-package utils
+package external
 
 import (
 	"encoding/json"
 	"fmt"
-	globel "ginchat/common"
+	"ginchat/service"
+	"github.com/spf13/viper"
 	"github.com/tencentcloud/tencentcloud-sdk-go/tencentcloud/common"
 	"github.com/tencentcloud/tencentcloud-sdk-go/tencentcloud/common/errors"
 	"github.com/tencentcloud/tencentcloud-sdk-go/tencentcloud/common/profile"
-
-	sms "github.com/tencentcloud/tencentcloud-sdk-go/tencentcloud/sms/v20210111" // 引入sms
+	sms "github.com/tencentcloud/tencentcloud-sdk-go/tencentcloud/sms/v20210111"
 	"math/rand"
 	"strings"
 	"time"
@@ -17,9 +17,10 @@ import (
 func SMS(phone string) {
 	// 实例化一个认证对象，入参需要传入腾讯云账户密钥对secretId,secretKey.
 	credential := common.NewCredential(
-		"AKIDkPtGPZXIp6B3lJelhZIrEQ7bw6fJrGSV",
-		"tzAKI2c2EDzYw7CsXFIwSyKSSIwRtFPN",
+		viper.GetString("credential.secretId"),
+		viper.GetString("credential.secretKey"),
 	)
+
 	// 实例化一个认证对象，入参需要传入腾讯云账户密钥对secretId,secretKey.
 	//credential := common.NewCredential(
 	//	"你的accessKeyId",
@@ -46,14 +47,15 @@ func SMS(phone string) {
 	request.TemplateId = common.StringPtr("1729324")
 
 	/* 模板参数: 模板参数的个数需要与 TemplateId 对应模板的变量个数保持一致，若无模板参数，则设置为空*/
-	code := GenerateSmsCode(6)
-	request.TemplateParamSet = common.StringPtrs([]string{code})
-
+	code1 := GenerateSmsCode(6)
+	fmt.Println(code1, "ZHESHICODE")
+	request.TemplateParamSet = common.StringPtrs([]string{code1, "1"})
 	/* 下发手机号码，采用 E.164 标准，+[国家或地区码][手机号]
 	 * 示例如：+8613711112222， 其中前面有一个+号 ，86为国家码，13711112222为手机号，最多不要超过200个手机号*/
-	request.PhoneNumberSet = common.StringPtrs([]string{phone})
+	phoneWithPrefix := "+86" + phone
+	request.PhoneNumberSet = common.StringPtrs([]string{phoneWithPrefix})
 	//使用redis缓存
-	globel.RDB.Set(globel.CTX, phone, code, time.Minute*1)
+	service.SaveCode(phone, code1)
 	// 通过client对象调用想要访问的接口，需要传入请求对象
 	response, err := client.SendSms(request)
 	// 处理异常

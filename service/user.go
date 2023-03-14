@@ -74,7 +74,18 @@ func LoginByPhoneCode(phoneCode *model.LoginByPhoneCode) (model.User, error) {
 	err, user := dao.LoginByPhoneCode(phoneCode)
 	if err != nil {
 		common.SugarLogger.Error("用户短信验证错误，err:%v", err)
+		fmt.Println(3333333)
 		return model.User{}, err
 	}
 	return user, nil
+}
+
+// redis验证
+func SaveCode(phone, code string) {
+	err := dao.SaveCode(phone, code)
+	if err != nil {
+		common.SugarLogger.Error("redis缓存验证码错误，err:%v", err)
+
+		panic(err)
+	}
 }

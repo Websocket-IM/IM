@@ -11,7 +11,7 @@ type User struct {
 	Username      string
 	Password      string
 	Nickname      string
-	Phone         string `valid:"matches(^1[3-9]{1}\\d{9}$)"`
+	Phone         string `valid:"phone"`
 	Email         string `valid:"email"`
 	Avatar        string //头像
 	Identity      string
@@ -35,16 +35,16 @@ type RegisterUserReq struct {
 // 更新用户资料
 type UpadateUserRep struct {
 	ID       uint   ` json:"id,omitempty"`
-	Nickname string `validate:"required,min=6,max=20" comment:"昵称"    json:"nickname,omitempty"`
-	Phone    string `valid:"matches(^1[3-9]{1}\\d{9}$)"  comment:"电话号码" json:"phone,omitempty"`
+	Nickname string `valid:"required,min=6,max=20" comment:"昵称"    json:"nickname,omitempty"`
+	Phone    string `valid:"phone"  comment:"电话号码" json:"phone,omitempty"`
 	Email    string `valid:"email" json:"email,omitempty"  comment:"邮箱"`
 	Avatar   string `json:"avatar,omitempty" comment:"头像"` //头像
 }
 
 // 用户登录
 type LoginUserRep struct {
-	Username string `form:"username" json:"username"  comment:"用户名" validate:"required,min=6,max=20"`
-	Password string `form:"password" json:"password"   comment:"密码" validate:"required,min=6,max=20"`
+	Username string `form:"username" json:"username"  comment:"用户名" valid:"required,min=6,max=20"`
+	Password string `form:"password" json:"password"   comment:"密码" valid:"required,min=6,max=20"`
 }
 
 // jwt
@@ -56,11 +56,11 @@ type MyClaims struct {
 
 // 验证码
 type LoginByPhone struct {
-	Phone string `valid:"required,matches(^1[3-9]{1}\\d{9}$)" comment:"电话号码" json:"phone"`
+	Phone string `json:"phone" validate:"required,phone" comment:"手机号"`
 }
 
 // 短信验证
 type LoginByPhoneCode struct {
-	Phone string `valid:"required,matches(^1[3-9]{1}\\d{9}$)" comment:"电话号码" json:"phone"`
-	Code  string `valid:"required,matches(^\\d{6}$)" comment:"验证码" json:"code"`
+	Phone string `json:"phone" valid:"required,phone"`
+	Code  string `valid:"required,len=6" comment:"验证码" json:"code"`
 }

@@ -16,8 +16,8 @@ func Route() *gin.Engine {
 		user.DELETE("/deleteUser", api.DeleteUser)
 		user.POST("/updateUser", api.UpadateUser)
 		user.POST("/login", api.LoginUser)
-		user.POST("/login/phone/code", api.LoginByPhoneCode)
-		user.POST("/login/phone", api.LoginByPhone)
+		user.POST("/login/phone/code", api.LoginByPhoneCode) //发验证码
+		user.POST("/login/phone", api.LoginByPhone)          //校对验证
 		user.POST("/find", api.FindBy)
 	}
 

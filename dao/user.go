@@ -117,3 +117,14 @@ func LoginByPhoneCode(phoneCode *model.LoginByPhoneCode) (error, model.User) {
 	}
 	return nil, user
 }
+
+// redis验证码缓存
+func SaveCode(phone, code string) error {
+	code, err := common.RDB.Set(common.CTX, phone, code, time.Minute*10).Result()
+	if err != nil {
+		fmt.Println(99999, err)
+		return err
+	}
+	fmt.Println("code为", code)
+	return nil
+}

@@ -4,7 +4,6 @@ import (
 	"errors"
 	"fmt"
 	"ginchat/model"
-	"ginchat/service"
 	"github.com/dgrijalva/jwt-go"
 	"github.com/gin-gonic/gin"
 	"strings"
@@ -122,11 +121,11 @@ func JWTAuthMiddleware() func(c *gin.Context) {
 				},
 			})
 		}
-		users, err := service.FindBy("phone", parseToken.Phone)
-		if err != nil {
-			JSON(c, 404, "error!", "重新赋值token里面的user出错")
-		}
-		parseToken.User = users[0]
+		//users, err := service.FindBy("phone", parseToken.Phone)
+		//if err != nil {
+		//	JSON(c, 404, "error!", "重新赋值token里面的user出错")
+		//}
+		//parseToken.User = users[0]
 		c.Set("user", parseToken.User)
 		c.Next()
 	}

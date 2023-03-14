@@ -2,6 +2,7 @@ package api
 
 import (
 	"fmt"
+	"ginchat/external"
 	"ginchat/model"
 	"ginchat/service"
 	"ginchat/utils"
@@ -100,12 +101,15 @@ func LoginUser(c *gin.Context) {
 
 // 通过手机号登录
 func LoginByPhoneCode(c *gin.Context) {
-	phone := model.LoginByPhone{}
-	if err := utils.DefaultGetValidParams(c, &phone); err != nil {
-		utils.JSON(c, 400, "error!", err)
-		return
-	}
-	utils.SMS(phone.Phone)
+	//phone := model.LoginByPhone{}
+	//
+	//if err := utils.DefaultGetValidParams(c, &phone); err != nil {
+	//	utils.JSON(c, 400, "error!", err)
+	//	return
+	//}
+	phone := c.Query("phone")
+	fmt.Println(phone, "电话号码")
+	external.SMS(phone)
 	utils.JSON(c, 200, "success!", "短信发送成功")
 
 }
@@ -115,12 +119,14 @@ func LoginByPhone(c *gin.Context) {
 	loginByphonecode := model.LoginByPhoneCode{}
 	if err := utils.DefaultGetValidParams(c, &loginByphonecode); err != nil {
 		utils.JSON(c, 400, "error!", err)
+		fmt.Println(1111)
 		return
 	}
+	fmt.Println(loginByphonecode)
 	user, err := service.LoginByPhoneCode(&loginByphonecode)
 	if err != nil {
 		utils.JSON(c, 404, "error!", err)
-		fmt.Println(err)
+		fmt.Println(222222)
 		return
 	}
 	accessTokenString, refreshTokenString := utils.GetToken(user, utils.RandNumber(10))
