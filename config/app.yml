@@ -4,4 +4,4 @@ mysql:
   host: 43.139.195.17
   port:
   name: ginchat
-  dns: root:123456@(43.139.195.17:8686)/ginchat?charset=utf8mb4&parseTime=True&loc=Local
+  dns: root:@(43.139.195.17:)/ginchat?charset=utf8mb4&parseTime=True&loc=Local
