@@ -1,6 +1,7 @@
 package api
 
 import (
+	"errors"
 	"fmt"
 	"ginchat/external"
 	"ginchat/model"
@@ -129,7 +130,7 @@ func LoginByPhone(c *gin.Context) {
 		fmt.Println(222222)
 		return
 	}
-	accessTokenString, refreshTokenString := utils.GetToken(user, utils.RandNumber(10))
+	accessTokenString, refreshTokenString := utils.GetToken(user.ID, utils.RandNumber(10))
 	c.JSON(200, gin.H{
 		"code": 200,
 		"msg":  "success",
@@ -143,5 +144,20 @@ func LoginByPhone(c *gin.Context) {
 
 // 根据字段查找
 func FindBy(c *gin.Context) {
+	filed := c.Query("field")
+	value := c.Query("value")
+	fmt.Println(filed, value, 2333)
+	user, err := service.FindBy(filed, value)
+	if err != nil {
+		fmt.Println("查找错误：", err)
+		utils.JSON(c, 500, "error!", err)
+		return
 
+	}
+	if len(user) == 0 {
+		fmt.Println("查找错误：没找到")
+		utils.JSON(c, 500, "error!", errors.New("查找不到相应数据"))
+		return
+	}
+	utils.JSON(c, 200, "success!", user)
 }

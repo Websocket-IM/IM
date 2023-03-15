@@ -14,10 +14,10 @@ var accessSecret = []byte("liuxian")
 var refreshSecret = []byte("123")
 
 // GetToken 获取accessToken和refreshToken
-func GetToken(user model.User, state string) (string, string) {
+func GetToken(id uint, state string) (string, string) {
 	// accessToken 的数据
 	aT := model.MyClaims{
-		user,
+		id,
 		state,
 		jwt.StandardClaims{
 			Issuer:    "AR",
@@ -27,7 +27,7 @@ func GetToken(user model.User, state string) (string, string) {
 	}
 	// refreshToken 的数据
 	rT := model.MyClaims{
-		user,
+		id,
 		state,
 		jwt.StandardClaims{
 			Issuer:    "AR",
@@ -80,10 +80,7 @@ func JWTAuthMiddleware() func(c *gin.Context) {
 		authHeader := c.Request.Header.Get("Authorization")
 		fmt.Println(c.Request.Header)
 		if authHeader == "" {
-			c.JSON(200, gin.H{
-				"code": 2003,
-				"msg":  "请求头中auth为空",
-			})
+			JSON(c, 400, "error!", "请求头中auth为空")
 			c.Abort()
 			return
 		}
@@ -92,25 +89,20 @@ func JWTAuthMiddleware() func(c *gin.Context) {
 		fmt.Println("len = ", len(parts))
 		fmt.Println("parts[0] = ", parts[0])
 		if !(len(parts) == 3 && parts[0] == "Bearer") {
-			c.JSON(200, gin.H{
-				"code": 2004,
-				"msg":  "请求头中auth格式有误",
-			})
+			JSON(c, 400, "error!", "请求头中auth格式有误")
+
 			c.Abort()
 			return
 		}
 		parseToken, isUpd, err := ParseToken(parts[1], parts[2])
 		if err != nil {
-			c.JSON(200, gin.H{
-				"code": 2005,
-				"msg":  "无效的Token",
-			})
+			JSON(c, 200, "success!", "无效的token")
 			c.Abort()
 			return
 		}
 		// accessToken 已经失效，需要刷新双Token
 		if isUpd {
-			parts[1], parts[2] = GetToken(parseToken.User, parseToken.State)
+			parts[1], parts[2] = GetToken(parseToken.ID, parseToken.State)
 			// 如果需要刷新双Token时，返回双Token
 			c.JSON(200, gin.H{
 				"code": 200,
@@ -121,12 +113,8 @@ func JWTAuthMiddleware() func(c *gin.Context) {
 				},
 			})
 		}
-		//users, err := service.FindBy("phone", parseToken.Phone)
-		//if err != nil {
-		//	JSON(c, 404, "error!", "重新赋值token里面的user出错")
-		//}
-		//parseToken.User = users[0]
-		c.Set("user", parseToken.User)
+
+		c.Set("userID", parseToken.ID)
 		c.Next()
 	}
 }

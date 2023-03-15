@@ -49,7 +49,7 @@ type LoginUserRep struct {
 
 // jwt
 type MyClaims struct {
-	User
+	ID    uint
 	State string `json:"state"`
 	jwt.StandardClaims
 }
