@@ -128,3 +128,13 @@ func SaveCode(phone, code string) error {
 	fmt.Println("code为", code)
 	return nil
 }
+
+// 添加用户
+func AddUser(user *model.User) error {
+	res := common.DB.Create(user)
+	if res.Error != nil {
+		fmt.Println(res.Error)
+		return res.Error
+	}
+	return nil
+}

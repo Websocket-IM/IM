@@ -1,7 +1,6 @@
 package model
 
 import (
-	"github.com/dgrijalva/jwt-go"
 	"gorm.io/gorm"
 	"time"
 )
@@ -23,6 +22,7 @@ type User struct {
 	LoginOutTime  time.Time `gorm:"column:login_out_time" json:"login_out_time"`
 	IsLogout      bool
 	DeviceInfo    string
+	GithubID      string
 }
 
 // 注册用户
@@ -35,7 +35,7 @@ type RegisterUserReq struct {
 // 更新用户资料
 type UpadateUserRep struct {
 	ID       uint   ` json:"id,omitempty"`
-	Nickname string `valid:"required,min=6,max=20" comment:"昵称"    json:"nickname,omitempty"`
+	Nickname string `valid:"required,min=2,max=20" comment:"昵称"    json:"nickname,omitempty"`
 	Phone    string `valid:"phone"  comment:"电话号码" json:"phone,omitempty"`
 	Email    string `valid:"email" json:"email,omitempty"  comment:"邮箱"`
 	Avatar   string `json:"avatar,omitempty" comment:"头像"` //头像
@@ -45,13 +45,6 @@ type UpadateUserRep struct {
 type LoginUserRep struct {
 	Username string `form:"username" json:"username"  comment:"用户名" valid:"required,min=6,max=20"`
 	Password string `form:"password" json:"password"   comment:"密码" valid:"required,min=6,max=20"`
-}
-
-// jwt
-type MyClaims struct {
-	ID    uint
-	State string `json:"state"`
-	jwt.StandardClaims
 }
 
 // 验证码

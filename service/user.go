@@ -89,3 +89,14 @@ func SaveCode(phone, code string) {
 		panic(err)
 	}
 }
+
+// 添加用户
+func AddUser(user *model.User) error {
+	if err := dao.AddUser(user); err != nil {
+		fmt.Println(err)
+		common.SugarLogger.Error("添加用户时出错：%v", err)
+		return err
+	}
+	fmt.Println("添加用户成功")
+	return nil
+}

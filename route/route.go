@@ -21,8 +21,11 @@ func Route() *gin.Engine {
 		user.POST("/login/phone", api.LoginByPhone)          //校对验证
 		user.POST("/find", api.FindBy)
 	}
+	// 测试token
 	r.POST("/token", utils.JWTAuthMiddleware(), func(context *gin.Context) {
 		context.JSON(200, "success")
 	})
+	r.GET("/auth/login/github", api.HandleGithubLogin)
+	r.GET("/auth/callback/github", api.HandleGithubCallback)
 	return r
 }
