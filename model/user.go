@@ -14,6 +14,7 @@ type User struct {
 	Email         string `valid:"email"`
 	Avatar        string //头像
 	Identity      string
+	GithubID      uint `gorm:"column:github_id;unique"`
 	ClientIp      string
 	ClientPort    string
 	Salt          string
@@ -22,7 +23,6 @@ type User struct {
 	LoginOutTime  time.Time `gorm:"column:login_out_time" json:"login_out_time"`
 	IsLogout      bool
 	DeviceInfo    string
-	GithubID      string
 }
 
 // 注册用户

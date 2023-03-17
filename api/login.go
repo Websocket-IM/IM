@@ -56,7 +56,19 @@ func LoginByPhone(c *gin.Context) {
 		return
 	}
 	fmt.Println(loginByphonecode)
-	user, err := service.LoginByPhoneCode(&loginByphonecode)
+	var user model.User
+	users, err := service.FindBy("phone", loginByphonecode.Phone)
+	if err != nil {
+		utils.JSON(c, 404, "error!", err)
+		fmt.Println(err)
+		return
+	}
+	if len(users) > 0 {
+		fmt.Println("该github用户已经存在")
+		user = users[0]
+	} else {
+		user, err = service.LoginByPhoneCode(&loginByphonecode)
+	}
 	if err != nil {
 		utils.JSON(c, 404, "error!", err)
 		fmt.Println(222222)
@@ -101,16 +113,28 @@ func HandleGithubCallback(c *gin.Context) {
 		return
 	}
 	fmt.Printf("------%v", token)
-	// 通过token，获取用户信息
 	var user model.User
+	// 通过token，获取用户信息
 	if user, err = external.GetUserInfo(token); err != nil {
 		fmt.Println("获取用户信息失败，错误信息为:", err)
 		return
 	}
-	if err = service.AddUser(&user); err != nil {
+	users, err := service.FindBy("github_id", user.GithubID)
+	if err != nil {
+		utils.JSON(c, 404, "error!", err)
 		fmt.Println(err)
-		utils.JSON(c, 404, "error", "github新增用户失败")
 		return
+	}
+	if len(users) > 0 {
+		fmt.Println("该github用户已经存在")
+		user = users[0]
+	} else {
+		if err = service.AddUser(&user); err != nil {
+			fmt.Println(err)
+			utils.JSON(c, 404, "error", "github新增用户失败")
+			return
+		}
+		fmt.Println("添加github新用户成功")
 	}
 	// 返回token和用户信息
 	accessTokenString, refreshTokenString := utils.GetToken(user.ID, utils.RandNumber(10))

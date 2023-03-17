@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"ginchat/model"
 	"net/http"
+	"reflect"
 	"time"
 )
 
@@ -42,13 +43,14 @@ func GetUserInfo(token *model.GithubToken) (model.User, error) {
 		fmt.Println(err)
 		return model.User{}, err
 	}
-	fmt.Println(userInfo["name"], "  这里是name")
-	fmt.Println(userInfo["id"].(float64), "  这里是id")
-	fmt.Sprintln(userInfo["name"])
+	fmt.Println(reflect.TypeOf(userInfo["name"].(string)).Kind())
+	fmt.Println(reflect.TypeOf(userInfo["id"]).Kind())
+	fmt.Println(userInfo["name"].(string), "  这里是name")
+	id := uint(userInfo["id"].(float64))
+
 	user := model.User{
-		Nickname:      fmt.Sprintln(userInfo["name"]),
-		GithubID:      fmt.Sprintln(userInfo["id"]),
-		Email:         fmt.Sprintln(userInfo["email"]),
+		Nickname:      userInfo["name"].(string),
+		GithubID:      id,
 		LoginTime:     time.Now(),
 		LoginOutTime:  time.Now(),
 		HeartbeatTime: time.Now(),
