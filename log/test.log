@@ -1,823 +1,288 @@
-2023-03-14T22:46:24.773+0800	DEBUG	utils/init_sysytem.go:73	Trying to hit GET request for www.sogo.com
-2023-03-14T22:46:24.793+0800	ERROR	utils/init_sysytem.go:76	Error fetching URL www.sogo.com : Error = Get "www.sogo.com": unsupported protocol scheme ""
-2023-03-14T22:46:24.793+0800	DEBUG	utils/init_sysytem.go:73	Trying to hit GET request for http://www.sogo.com
-2023-03-14T22:46:24.921+0800	INFO	utils/init_sysytem.go:78	Success! statusCode = 501 Not Implemented for URL http://www.sogo.com
-2023-03-14T22:46:25.252+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[37.343ms] [34;1m[rows:-][0m SELECT DATABASE()
-2023-03-14T22:46:25.358+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[106.517ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
-2023-03-14T22:46:25.441+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[82.065ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'ginchat' AND table_name = 'users' AND table_type = 'BASE TABLE'
-2023-03-14T22:46:25.482+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[33.433ms] [34;1m[rows:-][0m SELECT DATABASE()
-2023-03-14T22:46:25.562+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[80.557ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
-2023-03-14T22:46:25.614+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[46.349ms] [34;1m[rows:-][0m SELECT * FROM `users` LIMIT 1
-2023-03-14T22:46:25.713+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[96.542ms] [34;1m[rows:-][0m SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale , datetime_precision FROM information_schema.columns WHERE table_schema = 'ginchat' AND table_name = 'users' ORDER BY ORDINAL_POSITION
-2023-03-14T22:46:25.771+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[56.309ms] [34;1m[rows:-][0m SELECT DATABASE()
-2023-03-14T22:46:25.856+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[84.702ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
-2023-03-14T22:46:25.941+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[80.921ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'ginchat' AND table_name = 'users' AND index_name = 'idx_users_deleted_at'
-2023-03-14T22:48:12.222+0800	DEBUG	utils/init_sysytem.go:73	Trying to hit GET request for www.sogo.com
-2023-03-14T22:48:12.249+0800	ERROR	utils/init_sysytem.go:76	Error fetching URL www.sogo.com : Error = Get "www.sogo.com": unsupported protocol scheme ""
-2023-03-14T22:48:12.249+0800	DEBUG	utils/init_sysytem.go:73	Trying to hit GET request for http://www.sogo.com
-2023-03-14T22:48:12.357+0800	INFO	utils/init_sysytem.go:78	Success! statusCode = 501 Not Implemented for URL http://www.sogo.com
-2023-03-14T22:48:12.691+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[41.540ms] [34;1m[rows:-][0m SELECT DATABASE()
-2023-03-14T22:48:12.771+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[80.109ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
-2023-03-14T22:48:12.871+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[96.420ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'ginchat' AND table_name = 'users' AND table_type = 'BASE TABLE'
-2023-03-14T22:48:12.911+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[39.930ms] [34;1m[rows:-][0m SELECT DATABASE()
-2023-03-14T22:48:13.001+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[90.266ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
-2023-03-14T22:48:13.051+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[48.570ms] [34;1m[rows:-][0m SELECT * FROM `users` LIMIT 1
-2023-03-14T22:48:13.141+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[86.117ms] [34;1m[rows:-][0m SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale , datetime_precision FROM information_schema.columns WHERE table_schema = 'ginchat' AND table_name = 'users' ORDER BY ORDINAL_POSITION
-2023-03-14T22:48:13.191+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[41.004ms] [34;1m[rows:-][0m SELECT DATABASE()
-2023-03-14T22:48:13.278+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[86.519ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
-2023-03-14T22:48:13.371+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[93.510ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'ginchat' AND table_name = 'users' AND index_name = 'idx_users_deleted_at'
-2023-03-14T22:48:18.361+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/dao/user.go:54
-[0m[33m[193.937ms] [34;1m[rows:0][0m UPDATE `users` SET `updated_at`='2023-03-14 22:48:18.201',`nickname`='Alfs76efsf' WHERE id = 2 AND `users`.`deleted_at` IS NULL
-2023-03-14T23:01:58.088+0800	DEBUG	utils/init_sysytem.go:73	Trying to hit GET request for www.sogo.com
-2023-03-14T23:01:58.109+0800	ERROR	utils/init_sysytem.go:76	Error fetching URL www.sogo.com : Error = Get "www.sogo.com": unsupported protocol scheme ""
-2023-03-14T23:01:58.110+0800	DEBUG	utils/init_sysytem.go:73	Trying to hit GET request for http://www.sogo.com
-2023-03-14T23:01:58.230+0800	INFO	utils/init_sysytem.go:78	Success! statusCode = 501 Not Implemented for URL http://www.sogo.com
-2023-03-14T23:01:58.571+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[41.352ms] [34;1m[rows:-][0m SELECT DATABASE()
-2023-03-14T23:01:58.664+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[85.339ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
-2023-03-14T23:01:58.752+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[87.940ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'ginchat' AND table_name = 'users' AND table_type = 'BASE TABLE'
-2023-03-14T23:01:58.791+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[36.602ms] [34;1m[rows:-][0m SELECT DATABASE()
-2023-03-14T23:01:58.885+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[88.368ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
-2023-03-14T23:01:58.924+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[39.055ms] [34;1m[rows:-][0m SELECT * FROM `users` LIMIT 1
-2023-03-14T23:01:59.021+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[95.766ms] [34;1m[rows:-][0m SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale , datetime_precision FROM information_schema.columns WHERE table_schema = 'ginchat' AND table_name = 'users' ORDER BY ORDINAL_POSITION
-2023-03-14T23:01:59.072+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[43.627ms] [34;1m[rows:-][0m SELECT DATABASE()
-2023-03-14T23:01:59.155+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[80.484ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
-2023-03-14T23:01:59.245+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[90.147ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'ginchat' AND table_name = 'users' AND index_name = 'idx_users_deleted_at'
-2023-03-14T23:02:00.279+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/dao/user.go:54
-[0m[33m[191.694ms] [34;1m[rows:0][0m UPDATE `users` SET `updated_at`='2023-03-14 23:02:00.128',`nickname`='Alfs76efsf',`phone`='fse' WHERE id = 2 AND `users`.`deleted_at` IS NULL
-2023-03-14T23:03:27.180+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/dao/user.go:54
-[0m[33m[180.345ms] [34;1m[rows:0][0m UPDATE `users` SET `updated_at`='2023-03-14 23:03:27.054',`nickname`='Alfertettert',`phone`='fse' WHERE id = 2 AND `users`.`deleted_at` IS NULL
-2023-03-14T23:05:35.895+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/dao/user.go:54
-[0m[33m[172.370ms] [34;1m[rows:1][0m UPDATE `users` SET `updated_at`='2023-03-14 23:05:35.776',`nickname`='WOSHIZHU',`phone`='159' WHERE id = 5 AND `users`.`deleted_at` IS NULL
-2023-03-14T23:29:00.805+0800	ERROR	service/user.go:87	redis缓存验证码错误，err:%vi/o timeout
-2023-03-14T23:54:13.279+0800	DEBUG	utils/init_sysytem.go:73	Trying to hit GET request for www.sogo.com
-2023-03-14T23:54:13.297+0800	ERROR	utils/init_sysytem.go:76	Error fetching URL www.sogo.com : Error = Get "www.sogo.com": unsupported protocol scheme ""
-2023-03-14T23:54:13.297+0800	DEBUG	utils/init_sysytem.go:73	Trying to hit GET request for http://www.sogo.com
-2023-03-14T23:54:13.442+0800	INFO	utils/init_sysytem.go:78	Success! statusCode = 501 Not Implemented for URL http://www.sogo.com
-2023-03-14T23:54:13.832+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[48.283ms] [34;1m[rows:-][0m SELECT DATABASE()
-2023-03-14T23:54:13.939+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[106.961ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
-2023-03-14T23:54:14.037+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[97.675ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'ginchat' AND table_name = 'users' AND table_type = 'BASE TABLE'
-2023-03-14T23:54:14.087+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[47.506ms] [34;1m[rows:-][0m SELECT DATABASE()
-2023-03-14T23:54:14.189+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[101.501ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
-2023-03-14T23:54:14.228+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[38.822ms] [34;1m[rows:-][0m SELECT * FROM `users` LIMIT 1
-2023-03-14T23:54:14.323+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[91.907ms] [34;1m[rows:-][0m SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale , datetime_precision FROM information_schema.columns WHERE table_schema = 'ginchat' AND table_name = 'users' ORDER BY ORDINAL_POSITION
-2023-03-14T23:54:14.363+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[33.129ms] [34;1m[rows:-][0m SELECT DATABASE()
-2023-03-14T23:54:14.459+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[96.813ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
-2023-03-14T23:54:14.558+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[98.285ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'ginchat' AND table_name = 'users' AND index_name = 'idx_users_deleted_at'
-2023-03-14T23:54:30.814+0800	DEBUG	utils/init_sysytem.go:73	Trying to hit GET request for www.sogo.com
-2023-03-14T23:54:30.838+0800	ERROR	utils/init_sysytem.go:76	Error fetching URL www.sogo.com : Error = Get "www.sogo.com": unsupported protocol scheme ""
-2023-03-14T23:54:30.838+0800	DEBUG	utils/init_sysytem.go:73	Trying to hit GET request for http://www.sogo.com
-2023-03-14T23:54:30.952+0800	INFO	utils/init_sysytem.go:78	Success! statusCode = 501 Not Implemented for URL http://www.sogo.com
-2023-03-14T23:54:31.354+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[47.636ms] [34;1m[rows:-][0m SELECT DATABASE()
-2023-03-14T23:54:31.488+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[134.201ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
-2023-03-14T23:54:31.580+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[91.834ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'ginchat' AND table_name = 'users' AND table_type = 'BASE TABLE'
-2023-03-14T23:54:31.623+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[41.951ms] [34;1m[rows:-][0m SELECT DATABASE()
-2023-03-14T23:54:31.730+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[104.822ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
-2023-03-14T23:54:31.785+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[54.759ms] [34;1m[rows:-][0m SELECT * FROM `users` LIMIT 1
-2023-03-14T23:54:31.898+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[108.697ms] [34;1m[rows:-][0m SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale , datetime_precision FROM information_schema.columns WHERE table_schema = 'ginchat' AND table_name = 'users' ORDER BY ORDINAL_POSITION
-2023-03-14T23:54:31.933+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[33.510ms] [34;1m[rows:-][0m SELECT DATABASE()
-2023-03-14T23:54:32.041+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[108.307ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
-2023-03-14T23:54:32.135+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[94.413ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'ginchat' AND table_name = 'users' AND index_name = 'idx_users_deleted_at'
-2023-03-15T00:06:52.516+0800	ERROR	service/user.go:76	用户短信验证错误，err:%vi/o timeout
-2023-03-15T00:07:00.994+0800	ERROR	service/user.go:76	用户短信验证错误，err:%vredis: nil
-2023-03-15T00:07:16.202+0800	ERROR	service/user.go:76	用户短信验证错误，err:%vredis: nil
-2023-03-15T00:11:47.408+0800	DEBUG	utils/init_sysytem.go:73	Trying to hit GET request for www.sogo.com
-2023-03-15T00:11:47.442+0800	ERROR	utils/init_sysytem.go:76	Error fetching URL www.sogo.com : Error = Get "www.sogo.com": unsupported protocol scheme ""
-2023-03-15T00:11:47.442+0800	DEBUG	utils/init_sysytem.go:73	Trying to hit GET request for http://www.sogo.com
-2023-03-15T00:11:47.595+0800	INFO	utils/init_sysytem.go:78	Success! statusCode = 501 Not Implemented for URL http://www.sogo.com
-2023-03-15T00:11:47.954+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[37.707ms] [34;1m[rows:-][0m SELECT DATABASE()
-2023-03-15T00:11:48.053+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[90.141ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
-2023-03-15T00:11:48.173+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[120.287ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'ginchat' AND table_name = 'users' AND table_type = 'BASE TABLE'
-2023-03-15T00:11:48.213+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[36.553ms] [34;1m[rows:-][0m SELECT DATABASE()
-2023-03-15T00:11:48.320+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[100.635ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
-2023-03-15T00:11:48.373+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[52.833ms] [34;1m[rows:-][0m SELECT * FROM `users` LIMIT 1
-2023-03-15T00:11:48.486+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[109.610ms] [34;1m[rows:-][0m SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale , datetime_precision FROM information_schema.columns WHERE table_schema = 'ginchat' AND table_name = 'users' ORDER BY ORDINAL_POSITION
-2023-03-15T00:11:48.543+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[56.503ms] [34;1m[rows:-][0m SELECT DATABASE()
-2023-03-15T00:11:48.646+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[102.112ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
-2023-03-15T00:11:48.763+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[117.397ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'ginchat' AND table_name = 'users' AND index_name = 'idx_users_deleted_at'
-2023-03-15T00:11:51.915+0800	ERROR	service/user.go:76	用户短信验证错误，err:%vredis: nil
-2023-03-15T00:14:37.247+0800	DEBUG	utils/init_sysytem.go:73	Trying to hit GET request for www.sogo.com
-2023-03-15T00:14:37.267+0800	ERROR	utils/init_sysytem.go:76	Error fetching URL www.sogo.com : Error = Get "www.sogo.com": unsupported protocol scheme ""
-2023-03-15T00:14:37.267+0800	DEBUG	utils/init_sysytem.go:73	Trying to hit GET request for http://www.sogo.com
-2023-03-15T00:14:37.386+0800	INFO	utils/init_sysytem.go:78	Success! statusCode = 501 Not Implemented for URL http://www.sogo.com
-2023-03-15T00:14:37.751+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[38.669ms] [34;1m[rows:-][0m SELECT DATABASE()
-2023-03-15T00:14:37.847+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[96.154ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
-2023-03-15T00:14:37.921+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[73.454ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'ginchat' AND table_name = 'users' AND table_type = 'BASE TABLE'
-2023-03-15T00:14:37.963+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[42.135ms] [34;1m[rows:-][0m SELECT DATABASE()
-2023-03-15T00:14:38.054+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[87.564ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
-2023-03-15T00:14:38.087+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[33.557ms] [34;1m[rows:-][0m SELECT * FROM `users` LIMIT 1
-2023-03-15T00:14:38.193+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[101.061ms] [34;1m[rows:-][0m SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale , datetime_precision FROM information_schema.columns WHERE table_schema = 'ginchat' AND table_name = 'users' ORDER BY ORDINAL_POSITION
-2023-03-15T00:14:38.243+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[45.434ms] [34;1m[rows:-][0m SELECT DATABASE()
-2023-03-15T00:14:38.331+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[87.694ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
-2023-03-15T00:14:38.423+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[92.049ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'ginchat' AND table_name = 'users' AND index_name = 'idx_users_deleted_at'
-2023-03-15T00:14:46.169+0800	ERROR	service/user.go:76	用户短信验证错误，err:%vredis: nil
-2023-03-15T00:16:58.909+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/dao/user.go:114
-[0m[33m[186.565ms] [34;1m[rows:1][0m INSERT INTO `users` (`created_at`,`updated_at`,`deleted_at`,`username`,`password`,`nickname`,`phone`,`email`,`avatar`,`identity`,`client_ip`,`client_port`,`salt`,`login_time`,`heartbeat_time`,`login_out_time`,`is_logout`,`device_info`) VALUES ('2023-03-15 00:16:58.767','2023-03-15 00:16:58.767',NULL,'','c5ef38af6b6fb04f03c1362672757d00','user55591597','19870427401','','','','','','1298498081','2023-03-15 00:16:58.723','2023-03-15 00:16:58.723','2023-03-15 00:16:58.723',false,'')
-2023-03-15T00:17:26.215+0800	ERROR	service/user.go:76	用户短信验证错误，err:%v验证码错误！
-2023-03-15T00:17:42.194+0800	ERROR	service/user.go:76	用户短信验证错误，err:%v验证码错误！
-2023-03-15T00:18:04.646+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/dao/user.go:114
-[0m[33m[211.236ms] [34;1m[rows:1][0m INSERT INTO `users` (`created_at`,`updated_at`,`deleted_at`,`username`,`password`,`nickname`,`phone`,`email`,`avatar`,`identity`,`client_ip`,`client_port`,`salt`,`login_time`,`heartbeat_time`,`login_out_time`,`is_logout`,`device_info`) VALUES ('2023-03-15 00:18:04.487','2023-03-15 00:18:04.487',NULL,'','dce6eb5de0548048ef3cd91bdd8d1acf','user07770621','19870427401','','','','','','143882404','2023-03-15 00:18:04.435','2023-03-15 00:18:04.435','2023-03-15 00:18:04.435',false,'')
-2023-03-15T07:53:19.080+0800	DEBUG	utils/init_sysytem.go:73	Trying to hit GET request for www.sogo.com
-2023-03-15T07:53:19.101+0800	ERROR	utils/init_sysytem.go:76	Error fetching URL www.sogo.com : Error = Get "www.sogo.com": unsupported protocol scheme ""
-2023-03-15T07:53:19.101+0800	DEBUG	utils/init_sysytem.go:73	Trying to hit GET request for http://www.sogo.com
-2023-03-15T07:53:19.273+0800	INFO	utils/init_sysytem.go:78	Success! statusCode = 501 Not Implemented for URL http://www.sogo.com
-2023-03-15T07:53:19.677+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[43.867ms] [34;1m[rows:-][0m SELECT DATABASE()
-2023-03-15T07:53:19.782+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[104.286ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
-2023-03-15T07:53:19.871+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[89.109ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'ginchat' AND table_name = 'users' AND table_type = 'BASE TABLE'
-2023-03-15T07:53:19.927+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[45.985ms] [34;1m[rows:-][0m SELECT DATABASE()
-2023-03-15T07:53:20.030+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[98.627ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
-2023-03-15T07:53:20.073+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[42.496ms] [34;1m[rows:-][0m SELECT * FROM `users` LIMIT 1
-2023-03-15T07:53:20.176+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[95.321ms] [34;1m[rows:-][0m SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale , datetime_precision FROM information_schema.columns WHERE table_schema = 'ginchat' AND table_name = 'users' ORDER BY ORDINAL_POSITION
-2023-03-15T07:53:20.228+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[46.842ms] [34;1m[rows:-][0m SELECT DATABASE()
-2023-03-15T07:53:20.330+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[102.451ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
-2023-03-15T07:53:20.414+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[83.502ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'ginchat' AND table_name = 'users' AND index_name = 'idx_users_deleted_at'
-2023-03-15T07:53:27.586+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/dao/user.go:114
-[0m[33m[201.994ms] [34;1m[rows:1][0m INSERT INTO `users` (`created_at`,`updated_at`,`deleted_at`,`username`,`password`,`nickname`,`phone`,`email`,`avatar`,`identity`,`client_ip`,`client_port`,`salt`,`login_time`,`heartbeat_time`,`login_out_time`,`is_logout`,`device_info`) VALUES ('2023-03-15 07:53:27.436','2023-03-15 07:53:27.436',NULL,'','c5ef38af6b6fb04f03c1362672757d00','user89862028','19870427401','','','','','','1298498081','2023-03-15 07:53:27.384','2023-03-15 07:53:27.384','2023-03-15 07:53:27.384',false,'')
-2023-03-15T07:53:36.231+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/dao/user.go:114
-[0m[33m[200.179ms] [34;1m[rows:1][0m INSERT INTO `users` (`created_at`,`updated_at`,`deleted_at`,`username`,`password`,`nickname`,`phone`,`email`,`avatar`,`identity`,`client_ip`,`client_port`,`salt`,`login_time`,`heartbeat_time`,`login_out_time`,`is_logout`,`device_info`) VALUES ('2023-03-15 07:53:36.075','2023-03-15 07:53:36.075',NULL,'','899ad93fce60f1459838fc6036a44524','user78137115','19870427401','','','','','','998529838','2023-03-15 07:53:36.03','2023-03-15 07:53:36.03','2023-03-15 07:53:36.03',false,'')
-2023-03-15T08:06:07.531+0800	DEBUG	utils/init_sysytem.go:73	Trying to hit GET request for www.sogo.com
-2023-03-15T08:06:07.552+0800	ERROR	utils/init_sysytem.go:76	Error fetching URL www.sogo.com : Error = Get "www.sogo.com": unsupported protocol scheme ""
-2023-03-15T08:06:07.552+0800	DEBUG	utils/init_sysytem.go:73	Trying to hit GET request for http://www.sogo.com
-2023-03-15T08:06:07.751+0800	INFO	utils/init_sysytem.go:78	Success! statusCode = 501 Not Implemented for URL http://www.sogo.com
-2023-03-15T08:06:08.136+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[42.707ms] [34;1m[rows:-][0m SELECT DATABASE()
-2023-03-15T08:06:08.244+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[107.138ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
-2023-03-15T08:06:08.331+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[87.333ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'ginchat' AND table_name = 'users' AND table_type = 'BASE TABLE'
-2023-03-15T08:06:08.375+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[41.270ms] [34;1m[rows:-][0m SELECT DATABASE()
-2023-03-15T08:06:08.463+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[87.476ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
-2023-03-15T08:06:08.511+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[47.826ms] [34;1m[rows:-][0m SELECT * FROM `users` LIMIT 1
-2023-03-15T08:06:08.601+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[87.621ms] [34;1m[rows:-][0m SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale , datetime_precision FROM information_schema.columns WHERE table_schema = 'ginchat' AND table_name = 'users' ORDER BY ORDINAL_POSITION
-2023-03-15T08:06:08.651+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[47.751ms] [34;1m[rows:-][0m SELECT DATABASE()
-2023-03-15T08:06:08.752+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[99.951ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
-2023-03-15T08:06:08.852+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[99.276ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'ginchat' AND table_name = 'users' AND index_name = 'idx_users_deleted_at'
-2023-03-15T08:06:34.927+0800	DEBUG	utils/init_sysytem.go:73	Trying to hit GET request for www.sogo.com
-2023-03-15T08:06:34.949+0800	ERROR	utils/init_sysytem.go:76	Error fetching URL www.sogo.com : Error = Get "www.sogo.com": unsupported protocol scheme ""
-2023-03-15T08:06:34.949+0800	DEBUG	utils/init_sysytem.go:73	Trying to hit GET request for http://www.sogo.com
-2023-03-15T08:06:35.077+0800	INFO	utils/init_sysytem.go:78	Success! statusCode = 501 Not Implemented for URL http://www.sogo.com
-2023-03-15T08:06:35.446+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[48.868ms] [34;1m[rows:-][0m SELECT DATABASE()
-2023-03-15T08:06:35.547+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[101.412ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
-2023-03-15T08:06:35.637+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[89.653ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'ginchat' AND table_name = 'users' AND table_type = 'BASE TABLE'
-2023-03-15T08:06:35.686+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[48.794ms] [34;1m[rows:-][0m SELECT DATABASE()
-2023-03-15T08:06:35.786+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[99.288ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
-2023-03-15T08:06:35.836+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[49.889ms] [34;1m[rows:-][0m SELECT * FROM `users` LIMIT 1
-2023-03-15T08:06:35.936+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[99.685ms] [34;1m[rows:-][0m SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale , datetime_precision FROM information_schema.columns WHERE table_schema = 'ginchat' AND table_name = 'users' ORDER BY ORDINAL_POSITION
-2023-03-15T08:06:35.986+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[49.765ms] [34;1m[rows:-][0m SELECT DATABASE()
-2023-03-15T08:06:36.086+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[99.521ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
-2023-03-15T08:06:36.176+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[89.840ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'ginchat' AND table_name = 'users' AND index_name = 'idx_users_deleted_at'
-2023-03-15T08:06:42.402+0800	INFO	logger/logger.go:165	[31;1mE:/GoProjects/my-projects/websocket-IM/dao/user.go:65 [35;1mError 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= ? AND `users`.`deleted_at` IS NULL' at line 1
-[0m[33m[48.561ms] [34;1m[rows:0][0m SELECT * FROM `users` WHERE  = '4' AND `users`.`deleted_at` IS NULL
-2023-03-15T08:06:42.402+0800	ERROR	service/user.go:56	查询用户%v错误： %vError 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= ? AND `users`.`deleted_at` IS NULL' at line 1
-2023-03-15T08:08:45.562+0800	DEBUG	utils/init_sysytem.go:73	Trying to hit GET request for www.sogo.com
-2023-03-15T08:08:45.582+0800	ERROR	utils/init_sysytem.go:76	Error fetching URL www.sogo.com : Error = Get "www.sogo.com": unsupported protocol scheme ""
-2023-03-15T08:08:45.582+0800	DEBUG	utils/init_sysytem.go:73	Trying to hit GET request for http://www.sogo.com
-2023-03-15T08:08:45.720+0800	INFO	utils/init_sysytem.go:78	Success! statusCode = 501 Not Implemented for URL http://www.sogo.com
-2023-03-15T08:08:46.050+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[40.324ms] [34;1m[rows:-][0m SELECT DATABASE()
-2023-03-15T08:08:46.132+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[81.334ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
-2023-03-15T08:08:46.220+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[87.382ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'ginchat' AND table_name = 'users' AND table_type = 'BASE TABLE'
-2023-03-15T08:08:46.260+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[39.711ms] [34;1m[rows:-][0m SELECT DATABASE()
-2023-03-15T08:08:46.340+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[80.012ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
-2023-03-15T08:08:46.381+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[40.695ms] [34;1m[rows:-][0m SELECT * FROM `users` LIMIT 1
-2023-03-15T08:08:46.470+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[89.310ms] [34;1m[rows:-][0m SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale , datetime_precision FROM information_schema.columns WHERE table_schema = 'ginchat' AND table_name = 'users' ORDER BY ORDINAL_POSITION
-2023-03-15T08:08:46.510+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[39.291ms] [34;1m[rows:-][0m SELECT DATABASE()
-2023-03-15T08:08:46.600+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[89.411ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
-2023-03-15T08:08:46.701+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[100.326ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'ginchat' AND table_name = 'users' AND index_name = 'idx_users_deleted_at'
-2023-03-15T08:09:13.755+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/dao/user.go:65
-[0m[33m[72.062ms] [34;1m[rows:1][0m SELECT * FROM `users` WHERE id = '4' AND `users`.`deleted_at` IS NULL
-2023-03-15T08:09:33.913+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/dao/user.go:65
-[0m[33m[88.751ms] [34;1m[rows:1][0m SELECT * FROM `users` WHERE id = '6' AND `users`.`deleted_at` IS NULL
-2023-03-15T08:09:42.269+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/dao/user.go:65
-[0m[33m[81.652ms] [34;1m[rows:1][0m SELECT * FROM `users` WHERE id = '9' AND `users`.`deleted_at` IS NULL
-2023-03-15T08:09:49.133+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/dao/user.go:65
-[0m[33m[79.555ms] [34;1m[rows:0][0m SELECT * FROM `users` WHERE id = '10000' AND `users`.`deleted_at` IS NULL
-2023-03-15T08:10:47.129+0800	DEBUG	utils/init_sysytem.go:73	Trying to hit GET request for www.sogo.com
-2023-03-15T08:10:47.148+0800	ERROR	utils/init_sysytem.go:76	Error fetching URL www.sogo.com : Error = Get "www.sogo.com": unsupported protocol scheme ""
-2023-03-15T08:10:47.148+0800	DEBUG	utils/init_sysytem.go:73	Trying to hit GET request for http://www.sogo.com
-2023-03-15T08:10:47.278+0800	INFO	utils/init_sysytem.go:78	Success! statusCode = 501 Not Implemented for URL http://www.sogo.com
-2023-03-15T08:10:47.639+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[48.816ms] [34;1m[rows:-][0m SELECT DATABASE()
-2023-03-15T08:10:47.740+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[101.129ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
-2023-03-15T08:10:47.840+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[99.248ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'ginchat' AND table_name = 'users' AND table_type = 'BASE TABLE'
-2023-03-15T08:10:47.889+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[49.708ms] [34;1m[rows:-][0m SELECT DATABASE()
-2023-03-15T08:10:47.990+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[101.082ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
-2023-03-15T08:10:48.039+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[47.272ms] [34;1m[rows:-][0m SELECT * FROM `users` LIMIT 1
-2023-03-15T08:10:48.139+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[99.301ms] [34;1m[rows:-][0m SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale , datetime_precision FROM information_schema.columns WHERE table_schema = 'ginchat' AND table_name = 'users' ORDER BY ORDINAL_POSITION
-2023-03-15T08:10:48.189+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[47.554ms] [34;1m[rows:-][0m SELECT DATABASE()
-2023-03-15T08:10:48.290+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[100.946ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
-2023-03-15T08:10:48.389+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[98.276ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'ginchat' AND table_name = 'users' AND index_name = 'idx_users_deleted_at'
-2023-03-15T08:10:50.888+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/dao/user.go:65
-[0m[33m[94.031ms] [34;1m[rows:0][0m SELECT * FROM `users` WHERE id = '10000' AND `users`.`deleted_at` IS NULL
-2023-03-15T08:11:04.489+0800	INFO	logger/logger.go:165	[31;1mE:/GoProjects/my-projects/websocket-IM/dao/user.go:65 [35;1mError 1054 (42S22): Unknown column 'dhhdh' in 'where clause'
-[0m[33m[40.478ms] [34;1m[rows:0][0m SELECT * FROM `users` WHERE dhhdh = '2' AND `users`.`deleted_at` IS NULL
-2023-03-15T08:11:04.489+0800	ERROR	service/user.go:56	查询用户%v错误： %vdhhdhError 1054 (42S22): Unknown column 'dhhdh' in 'where clause'
-2023-03-15T08:12:47.621+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/dao/user.go:65
-[0m[33m[97.700ms] [34;1m[rows:0][0m SELECT * FROM `users` WHERE id = '5000' AND `users`.`deleted_at` IS NULL
-2023-03-15T08:13:24.918+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/dao/user.go:65
-[0m[33m[100.267ms] [34;1m[rows:0][0m SELECT * FROM `users` WHERE 67 = '5000' AND `users`.`deleted_at` IS NULL
-2023-03-15T08:13:30.146+0800	INFO	logger/logger.go:165	[31;1mE:/GoProjects/my-projects/websocket-IM/dao/user.go:65 [35;1mError 1054 (42S22): Unknown column 'sfes' in 'where clause'
-[0m[33m[51.717ms] [34;1m[rows:0][0m SELECT * FROM `users` WHERE sfes = '5000' AND `users`.`deleted_at` IS NULL
-2023-03-15T08:13:30.146+0800	ERROR	service/user.go:56	查询用户%v错误： %vsfesError 1054 (42S22): Unknown column 'sfes' in 'where clause'
-2023-03-15T08:14:12.530+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/dao/user.go:65
-[0m[33m[95.074ms] [34;1m[rows:0][0m SELECT * FROM `users` WHERE id = '2' AND `users`.`deleted_at` IS NULL
-2023-03-15T08:14:16.998+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/dao/user.go:65
-[0m[33m[93.437ms] [34;1m[rows:1][0m SELECT * FROM `users` WHERE id = '6' AND `users`.`deleted_at` IS NULL
-2023-03-15T08:39:39.434+0800	DEBUG	utils/init_sysytem.go:73	Trying to hit GET request for www.sogo.com
-2023-03-15T08:39:39.456+0800	ERROR	utils/init_sysytem.go:76	Error fetching URL www.sogo.com : Error = Get "www.sogo.com": unsupported protocol scheme ""
-2023-03-15T08:39:39.456+0800	DEBUG	utils/init_sysytem.go:73	Trying to hit GET request for http://www.sogo.com
-2023-03-15T08:39:39.610+0800	INFO	utils/init_sysytem.go:78	Success! statusCode = 501 Not Implemented for URL http://www.sogo.com
-2023-03-15T08:39:39.988+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[37.207ms] [34;1m[rows:-][0m SELECT DATABASE()
-2023-03-15T08:39:40.092+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[104.034ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
-2023-03-15T08:39:40.190+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[96.954ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'ginchat' AND table_name = 'users' AND table_type = 'BASE TABLE'
-2023-03-15T08:39:40.258+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[67.662ms] [34;1m[rows:-][0m SELECT DATABASE()
-2023-03-15T08:39:40.360+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[102.021ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
-2023-03-15T08:39:40.410+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[49.117ms] [34;1m[rows:-][0m SELECT * FROM `users` LIMIT 1
-2023-03-15T08:39:40.509+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[99.781ms] [34;1m[rows:-][0m SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale , datetime_precision FROM information_schema.columns WHERE table_schema = 'ginchat' AND table_name = 'users' ORDER BY ORDINAL_POSITION
-2023-03-15T08:39:40.560+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[49.622ms] [34;1m[rows:-][0m SELECT DATABASE()
-2023-03-15T08:39:40.650+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[89.949ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
-2023-03-15T08:39:40.757+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[107.725ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'ginchat' AND table_name = 'users' AND index_name = 'idx_users_deleted_at'
-2023-03-16T11:52:37.885+0800	DEBUG	utils/init_sysytem.go:73	Trying to hit GET request for www.sogo.com
-2023-03-16T11:52:37.897+0800	ERROR	utils/init_sysytem.go:76	Error fetching URL www.sogo.com : Error = Get "www.sogo.com": unsupported protocol scheme ""
-2023-03-16T11:52:37.897+0800	DEBUG	utils/init_sysytem.go:73	Trying to hit GET request for http://www.sogo.com
-2023-03-16T11:52:38.100+0800	INFO	utils/init_sysytem.go:78	Success! statusCode = 501 Not Implemented for URL http://www.sogo.com
-2023-03-16T11:52:38.605+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[69.971ms] [34;1m[rows:-][0m SELECT DATABASE()
-2023-03-16T11:52:38.735+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[130.031ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
-2023-03-16T11:52:38.858+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[123.025ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'ginchat' AND table_name = 'users' AND table_type = 'BASE TABLE'
-2023-03-16T11:52:38.926+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[67.741ms] [34;1m[rows:-][0m SELECT DATABASE()
-2023-03-16T11:52:39.043+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[117.064ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
-2023-03-16T11:52:39.097+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[53.650ms] [34;1m[rows:-][0m SELECT * FROM `users` LIMIT 1
-2023-03-16T11:52:39.236+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[138.718ms] [34;1m[rows:-][0m SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale , datetime_precision FROM information_schema.columns WHERE table_schema = 'ginchat' AND table_name = 'users' ORDER BY ORDINAL_POSITION
-2023-03-16T11:52:39.292+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[55.342ms] [34;1m[rows:-][0m SELECT DATABASE()
-2023-03-16T11:52:39.402+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[109.752ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
-2023-03-16T11:52:39.505+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[102.909ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'ginchat' AND table_name = 'users' AND index_name = 'idx_users_deleted_at'
-2023-03-16T12:06:14.841+0800	DEBUG	utils/init_sysytem.go:73	Trying to hit GET request for www.sogo.com
-2023-03-16T12:06:14.853+0800	ERROR	utils/init_sysytem.go:76	Error fetching URL www.sogo.com : Error = Get "www.sogo.com": unsupported protocol scheme ""
-2023-03-16T12:06:14.853+0800	DEBUG	utils/init_sysytem.go:73	Trying to hit GET request for http://www.sogo.com
-2023-03-16T12:06:14.989+0800	INFO	utils/init_sysytem.go:78	Success! statusCode = 501 Not Implemented for URL http://www.sogo.com
-2023-03-16T12:06:15.340+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[42.790ms] [34;1m[rows:-][0m SELECT DATABASE()
-2023-03-16T12:06:15.434+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[93.413ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
-2023-03-16T12:06:15.527+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[92.254ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'ginchat' AND table_name = 'users' AND table_type = 'BASE TABLE'
-2023-03-16T12:06:15.579+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[51.586ms] [34;1m[rows:-][0m SELECT DATABASE()
-2023-03-16T12:06:15.678+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[97.816ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
-2023-03-16T12:06:15.727+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[49.099ms] [34;1m[rows:-][0m SELECT * FROM `users` LIMIT 1
-2023-03-16T12:06:15.817+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[89.515ms] [34;1m[rows:-][0m SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale , datetime_precision FROM information_schema.columns WHERE table_schema = 'ginchat' AND table_name = 'users' ORDER BY ORDINAL_POSITION
-2023-03-16T12:06:15.868+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[49.594ms] [34;1m[rows:-][0m SELECT DATABASE()
-2023-03-16T12:06:15.958+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[89.604ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
-2023-03-16T12:06:16.058+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[100.046ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'ginchat' AND table_name = 'users' AND index_name = 'idx_users_deleted_at'
-2023-03-16T12:13:47.549+0800	DEBUG	utils/init_sysytem.go:73	Trying to hit GET request for www.sogo.com
-2023-03-16T12:13:47.560+0800	ERROR	utils/init_sysytem.go:76	Error fetching URL www.sogo.com : Error = Get "www.sogo.com": unsupported protocol scheme ""
-2023-03-16T12:13:47.560+0800	DEBUG	utils/init_sysytem.go:73	Trying to hit GET request for http://www.sogo.com
-2023-03-16T12:13:47.705+0800	INFO	utils/init_sysytem.go:78	Success! statusCode = 501 Not Implemented for URL http://www.sogo.com
-2023-03-16T12:13:48.085+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[47.508ms] [34;1m[rows:-][0m SELECT DATABASE()
-2023-03-16T12:13:48.185+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[99.594ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
-2023-03-16T12:13:48.274+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[89.379ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'ginchat' AND table_name = 'users' AND table_type = 'BASE TABLE'
-2023-03-16T12:13:48.325+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[50.051ms] [34;1m[rows:-][0m SELECT DATABASE()
-2023-03-16T12:13:48.414+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[89.027ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
-2023-03-16T12:13:48.463+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[49.214ms] [34;1m[rows:-][0m SELECT * FROM `users` LIMIT 1
-2023-03-16T12:13:48.549+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[85.227ms] [34;1m[rows:-][0m SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale , datetime_precision FROM information_schema.columns WHERE table_schema = 'ginchat' AND table_name = 'users' ORDER BY ORDINAL_POSITION
-2023-03-16T12:13:48.597+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[47.310ms] [34;1m[rows:-][0m SELECT DATABASE()
-2023-03-16T12:13:48.705+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[107.697ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
-2023-03-16T12:13:48.804+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[98.603ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'ginchat' AND table_name = 'users' AND index_name = 'idx_users_deleted_at'
-2023-03-16T13:42:57.231+0800	DEBUG	utils/init_sysytem.go:73	Trying to hit GET request for www.sogo.com
-2023-03-16T13:42:57.242+0800	ERROR	utils/init_sysytem.go:76	Error fetching URL www.sogo.com : Error = Get "www.sogo.com": unsupported protocol scheme ""
-2023-03-16T13:42:57.242+0800	DEBUG	utils/init_sysytem.go:73	Trying to hit GET request for http://www.sogo.com
-2023-03-16T13:42:57.387+0800	INFO	utils/init_sysytem.go:78	Success! statusCode = 501 Not Implemented for URL http://www.sogo.com
-2023-03-16T13:42:57.776+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[53.277ms] [34;1m[rows:-][0m SELECT DATABASE()
-2023-03-16T13:42:57.877+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[101.450ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
-2023-03-16T13:42:57.965+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[87.959ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'ginchat' AND table_name = 'users' AND table_type = 'BASE TABLE'
-2023-03-16T13:42:58.011+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[45.523ms] [34;1m[rows:-][0m SELECT DATABASE()
-2023-03-16T13:42:58.103+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[90.328ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
-2023-03-16T13:42:58.157+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[53.204ms] [34;1m[rows:-][0m SELECT * FROM `users` LIMIT 1
-2023-03-16T13:42:58.257+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[99.745ms] [34;1m[rows:-][0m SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale , datetime_precision FROM information_schema.columns WHERE table_schema = 'ginchat' AND table_name = 'users' ORDER BY ORDINAL_POSITION
-2023-03-16T13:42:58.307+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[49.981ms] [34;1m[rows:-][0m SELECT DATABASE()
-2023-03-16T13:42:58.407+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[100.022ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
-2023-03-16T13:42:58.497+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[89.909ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'ginchat' AND table_name = 'users' AND index_name = 'idx_users_deleted_at'
-2023-03-16T13:55:16.153+0800	DEBUG	utils/init_sysytem.go:73	Trying to hit GET request for www.sogo.com
-2023-03-16T13:55:16.165+0800	ERROR	utils/init_sysytem.go:76	Error fetching URL www.sogo.com : Error = Get "www.sogo.com": unsupported protocol scheme ""
-2023-03-16T13:55:16.165+0800	DEBUG	utils/init_sysytem.go:73	Trying to hit GET request for http://www.sogo.com
-2023-03-16T13:55:16.340+0800	INFO	utils/init_sysytem.go:78	Success! statusCode = 501 Not Implemented for URL http://www.sogo.com
-2023-03-16T13:55:16.706+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[55.837ms] [34;1m[rows:-][0m SELECT DATABASE()
-2023-03-16T13:55:16.800+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[94.058ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
-2023-03-16T13:55:16.901+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[100.609ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'ginchat' AND table_name = 'users' AND table_type = 'BASE TABLE'
-2023-03-16T13:55:16.956+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[54.689ms] [34;1m[rows:-][0m SELECT DATABASE()
-2023-03-16T13:55:17.056+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[100.620ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
-2023-03-16T13:55:17.106+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[49.233ms] [34;1m[rows:-][0m SELECT * FROM `users` LIMIT 1
-2023-03-16T13:55:17.206+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[99.242ms] [34;1m[rows:-][0m SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale , datetime_precision FROM information_schema.columns WHERE table_schema = 'ginchat' AND table_name = 'users' ORDER BY ORDINAL_POSITION
-2023-03-16T13:55:17.244+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[38.136ms] [34;1m[rows:-][0m SELECT DATABASE()
-2023-03-16T13:55:17.346+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[101.742ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
-2023-03-16T13:55:17.445+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[98.966ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'ginchat' AND table_name = 'users' AND index_name = 'idx_users_deleted_at'
-2023-03-16T14:03:45.125+0800	DEBUG	utils/init_sysytem.go:73	Trying to hit GET request for www.sogo.com
-2023-03-16T14:03:45.136+0800	ERROR	utils/init_sysytem.go:76	Error fetching URL www.sogo.com : Error = Get "www.sogo.com": unsupported protocol scheme ""
-2023-03-16T14:03:45.136+0800	DEBUG	utils/init_sysytem.go:73	Trying to hit GET request for http://www.sogo.com
-2023-03-16T14:03:45.317+0800	INFO	utils/init_sysytem.go:78	Success! statusCode = 501 Not Implemented for URL http://www.sogo.com
-2023-03-16T14:03:45.660+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[49.673ms] [34;1m[rows:-][0m SELECT DATABASE()
-2023-03-16T14:03:45.760+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[99.959ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
-2023-03-16T14:03:45.859+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[99.219ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'ginchat' AND table_name = 'users' AND table_type = 'BASE TABLE'
-2023-03-16T14:03:45.909+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[48.725ms] [34;1m[rows:-][0m SELECT DATABASE()
-2023-03-16T14:03:46.005+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[94.899ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
-2023-03-16T14:03:46.055+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[50.817ms] [34;1m[rows:-][0m SELECT * FROM `users` LIMIT 1
-2023-03-16T14:03:46.179+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[123.214ms] [34;1m[rows:-][0m SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale , datetime_precision FROM information_schema.columns WHERE table_schema = 'ginchat' AND table_name = 'users' ORDER BY ORDINAL_POSITION
-2023-03-16T14:03:46.230+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[48.753ms] [34;1m[rows:-][0m SELECT DATABASE()
-2023-03-16T14:03:46.320+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[90.091ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
-2023-03-16T14:03:46.430+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[109.850ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'ginchat' AND table_name = 'users' AND index_name = 'idx_users_deleted_at'
-2023-03-16T14:05:15.093+0800	DEBUG	utils/init_sysytem.go:73	Trying to hit GET request for www.sogo.com
-2023-03-16T14:05:15.104+0800	ERROR	utils/init_sysytem.go:76	Error fetching URL www.sogo.com : Error = Get "www.sogo.com": unsupported protocol scheme ""
-2023-03-16T14:05:15.104+0800	DEBUG	utils/init_sysytem.go:73	Trying to hit GET request for http://www.sogo.com
-2023-03-16T14:05:15.227+0800	INFO	utils/init_sysytem.go:78	Success! statusCode = 501 Not Implemented for URL http://www.sogo.com
-2023-03-16T14:05:15.628+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[59.411ms] [34;1m[rows:-][0m SELECT DATABASE()
-2023-03-16T14:05:15.728+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[99.632ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
-2023-03-16T14:05:15.835+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[106.753ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'ginchat' AND table_name = 'users' AND table_type = 'BASE TABLE'
-2023-03-16T14:05:15.878+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[43.072ms] [34;1m[rows:-][0m SELECT DATABASE()
-2023-03-16T14:05:15.969+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[90.081ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
-2023-03-16T14:05:16.027+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[57.646ms] [34;1m[rows:-][0m SELECT * FROM `users` LIMIT 1
-2023-03-16T14:05:16.147+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[120.152ms] [34;1m[rows:-][0m SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale , datetime_precision FROM information_schema.columns WHERE table_schema = 'ginchat' AND table_name = 'users' ORDER BY ORDINAL_POSITION
-2023-03-16T14:05:16.196+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[48.274ms] [34;1m[rows:-][0m SELECT DATABASE()
-2023-03-16T14:05:16.280+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[84.146ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
-2023-03-16T14:05:16.373+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[92.456ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'ginchat' AND table_name = 'users' AND index_name = 'idx_users_deleted_at'
-2023-03-16T14:07:56.814+0800	DEBUG	utils/init_sysytem.go:73	Trying to hit GET request for www.sogo.com
-2023-03-16T14:07:56.825+0800	ERROR	utils/init_sysytem.go:76	Error fetching URL www.sogo.com : Error = Get "www.sogo.com": unsupported protocol scheme ""
-2023-03-16T14:07:56.825+0800	DEBUG	utils/init_sysytem.go:73	Trying to hit GET request for http://www.sogo.com
-2023-03-16T14:07:57.163+0800	INFO	utils/init_sysytem.go:78	Success! statusCode = 501 Not Implemented for URL http://www.sogo.com
-2023-03-16T14:07:57.623+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[59.491ms] [34;1m[rows:-][0m SELECT DATABASE()
-2023-03-16T14:07:57.733+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[110.434ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
-2023-03-16T14:07:57.841+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[107.835ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'ginchat' AND table_name = 'users' AND table_type = 'BASE TABLE'
-2023-03-16T14:07:57.903+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[60.272ms] [34;1m[rows:-][0m SELECT DATABASE()
-2023-03-16T14:07:58.013+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[109.455ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
-2023-03-16T14:07:58.063+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[50.600ms] [34;1m[rows:-][0m SELECT * FROM `users` LIMIT 1
-2023-03-16T14:07:58.183+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[118.103ms] [34;1m[rows:-][0m SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale , datetime_precision FROM information_schema.columns WHERE table_schema = 'ginchat' AND table_name = 'users' ORDER BY ORDINAL_POSITION
-2023-03-16T14:07:58.233+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[49.214ms] [34;1m[rows:-][0m SELECT DATABASE()
-2023-03-16T14:07:58.353+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[120.022ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
-2023-03-16T14:07:58.462+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[108.035ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'ginchat' AND table_name = 'users' AND index_name = 'idx_users_deleted_at'
-2023-03-16T14:21:22.292+0800	DEBUG	utils/init_sysytem.go:73	Trying to hit GET request for www.sogo.com
-2023-03-16T14:21:22.304+0800	ERROR	utils/init_sysytem.go:76	Error fetching URL www.sogo.com : Error = Get "www.sogo.com": unsupported protocol scheme ""
-2023-03-16T14:21:22.304+0800	DEBUG	utils/init_sysytem.go:73	Trying to hit GET request for http://www.sogo.com
-2023-03-16T14:21:22.503+0800	INFO	utils/init_sysytem.go:78	Success! statusCode = 501 Not Implemented for URL http://www.sogo.com
-2023-03-16T14:21:22.921+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[54.811ms] [34;1m[rows:-][0m SELECT DATABASE()
-2023-03-16T14:21:23.059+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[137.679ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
-2023-03-16T14:21:23.141+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[82.259ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'ginchat' AND table_name = 'users' AND table_type = 'BASE TABLE'
-2023-03-16T14:21:23.253+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[111.041ms] [34;1m[rows:-][0m SELECT DATABASE()
-2023-03-16T14:21:23.390+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[136.661ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
-2023-03-16T14:21:23.459+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[68.168ms] [34;1m[rows:-][0m SELECT * FROM `users` LIMIT 1
-2023-03-16T14:21:23.589+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[129.980ms] [34;1m[rows:-][0m SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale , datetime_precision FROM information_schema.columns WHERE table_schema = 'ginchat' AND table_name = 'users' ORDER BY ORDINAL_POSITION
-2023-03-16T14:21:23.631+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[41.843ms] [34;1m[rows:-][0m SELECT DATABASE()
-2023-03-16T14:21:23.732+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[101.144ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
-2023-03-16T14:21:23.832+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[99.768ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'ginchat' AND table_name = 'users' AND index_name = 'idx_users_deleted_at'
-2023-03-16T14:26:28.228+0800	DEBUG	utils/init_sysytem.go:73	Trying to hit GET request for www.sogo.com
-2023-03-16T14:26:28.239+0800	ERROR	utils/init_sysytem.go:76	Error fetching URL www.sogo.com : Error = Get "www.sogo.com": unsupported protocol scheme ""
-2023-03-16T14:26:28.239+0800	DEBUG	utils/init_sysytem.go:73	Trying to hit GET request for http://www.sogo.com
-2023-03-16T14:26:28.398+0800	INFO	utils/init_sysytem.go:78	Success! statusCode = 501 Not Implemented for URL http://www.sogo.com
-2023-03-16T14:26:28.837+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[50.890ms] [34;1m[rows:-][0m SELECT DATABASE()
-2023-03-16T14:26:28.934+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[96.886ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
-2023-03-16T14:26:29.025+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[91.398ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'ginchat' AND table_name = 'users' AND table_type = 'BASE TABLE'
-2023-03-16T14:26:29.086+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[60.682ms] [34;1m[rows:-][0m SELECT DATABASE()
-2023-03-16T14:26:29.207+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[121.447ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
-2023-03-16T14:26:29.267+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[59.420ms] [34;1m[rows:-][0m SELECT * FROM `users` LIMIT 1
-2023-03-16T14:26:29.386+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[118.518ms] [34;1m[rows:-][0m SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale , datetime_precision FROM information_schema.columns WHERE table_schema = 'ginchat' AND table_name = 'users' ORDER BY ORDINAL_POSITION
-2023-03-16T14:26:29.447+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[61.373ms] [34;1m[rows:-][0m SELECT DATABASE()
-2023-03-16T14:26:29.557+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[109.925ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
-2023-03-16T14:26:29.667+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[109.696ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'ginchat' AND table_name = 'users' AND index_name = 'idx_users_deleted_at'
-2023-03-16T14:28:47.983+0800	DEBUG	utils/init_sysytem.go:73	Trying to hit GET request for www.sogo.com
-2023-03-16T14:28:47.994+0800	ERROR	utils/init_sysytem.go:76	Error fetching URL www.sogo.com : Error = Get "www.sogo.com": unsupported protocol scheme ""
-2023-03-16T14:28:47.994+0800	DEBUG	utils/init_sysytem.go:73	Trying to hit GET request for http://www.sogo.com
-2023-03-16T14:28:48.106+0800	INFO	utils/init_sysytem.go:78	Success! statusCode = 501 Not Implemented for URL http://www.sogo.com
-2023-03-16T14:28:48.458+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[39.276ms] [34;1m[rows:-][0m SELECT DATABASE()
-2023-03-16T14:28:48.528+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[70.324ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
-2023-03-16T14:28:48.626+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[96.857ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'ginchat' AND table_name = 'users' AND table_type = 'BASE TABLE'
-2023-03-16T14:28:48.676+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[49.392ms] [34;1m[rows:-][0m SELECT DATABASE()
-2023-03-16T14:28:48.757+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[80.882ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
-2023-03-16T14:28:48.806+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[48.987ms] [34;1m[rows:-][0m SELECT * FROM `users` LIMIT 1
-2023-03-16T14:28:48.906+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[99.609ms] [34;1m[rows:-][0m SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale , datetime_precision FROM information_schema.columns WHERE table_schema = 'ginchat' AND table_name = 'users' ORDER BY ORDINAL_POSITION
-2023-03-16T14:28:48.956+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[49.492ms] [34;1m[rows:-][0m SELECT DATABASE()
-2023-03-16T14:28:49.057+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[100.621ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
-2023-03-16T14:28:49.145+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[88.189ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'ginchat' AND table_name = 'users' AND index_name = 'idx_users_deleted_at'
-2023-03-16T14:32:41.941+0800	DEBUG	utils/init_sysytem.go:73	Trying to hit GET request for www.sogo.com
-2023-03-16T14:32:41.952+0800	ERROR	utils/init_sysytem.go:76	Error fetching URL www.sogo.com : Error = Get "www.sogo.com": unsupported protocol scheme ""
-2023-03-16T14:32:41.952+0800	DEBUG	utils/init_sysytem.go:73	Trying to hit GET request for http://www.sogo.com
-2023-03-16T14:32:42.080+0800	INFO	utils/init_sysytem.go:78	Success! statusCode = 501 Not Implemented for URL http://www.sogo.com
-2023-03-16T14:32:42.490+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[53.656ms] [34;1m[rows:-][0m SELECT DATABASE()
-2023-03-16T14:32:42.600+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[110.154ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
-2023-03-16T14:32:42.715+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[114.992ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'ginchat' AND table_name = 'users' AND table_type = 'BASE TABLE'
-2023-03-16T14:32:42.770+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[54.436ms] [34;1m[rows:-][0m SELECT DATABASE()
-2023-03-16T14:32:42.890+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[119.720ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
-2023-03-16T14:32:42.950+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[58.702ms] [34;1m[rows:-][0m SELECT * FROM `users` LIMIT 1
-2023-03-16T14:32:43.070+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[119.091ms] [34;1m[rows:-][0m SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale , datetime_precision FROM information_schema.columns WHERE table_schema = 'ginchat' AND table_name = 'users' ORDER BY ORDINAL_POSITION
-2023-03-16T14:32:43.130+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[59.467ms] [34;1m[rows:-][0m SELECT DATABASE()
-2023-03-16T14:32:43.228+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[98.597ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
-2023-03-16T14:32:43.330+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[101.525ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'ginchat' AND table_name = 'users' AND index_name = 'idx_users_deleted_at'
-2023-03-16T14:37:33.462+0800	DEBUG	utils/init_sysytem.go:73	Trying to hit GET request for www.sogo.com
-2023-03-16T14:37:33.475+0800	ERROR	utils/init_sysytem.go:76	Error fetching URL www.sogo.com : Error = Get "www.sogo.com": unsupported protocol scheme ""
-2023-03-16T14:37:33.475+0800	DEBUG	utils/init_sysytem.go:73	Trying to hit GET request for http://www.sogo.com
-2023-03-16T14:37:33.600+0800	INFO	utils/init_sysytem.go:78	Success! statusCode = 501 Not Implemented for URL http://www.sogo.com
-2023-03-16T14:37:34.020+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[59.563ms] [34;1m[rows:-][0m SELECT DATABASE()
-2023-03-16T14:37:34.130+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[110.191ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
-2023-03-16T14:37:34.222+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[91.239ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'ginchat' AND table_name = 'users' AND table_type = 'BASE TABLE'
-2023-03-16T14:37:34.280+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[57.902ms] [34;1m[rows:-][0m SELECT DATABASE()
-2023-03-16T14:37:34.395+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[114.899ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
-2023-03-16T14:37:34.440+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[45.136ms] [34;1m[rows:-][0m SELECT * FROM `users` LIMIT 1
-2023-03-16T14:37:34.551+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[110.081ms] [34;1m[rows:-][0m SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale , datetime_precision FROM information_schema.columns WHERE table_schema = 'ginchat' AND table_name = 'users' ORDER BY ORDINAL_POSITION
-2023-03-16T14:37:34.610+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[58.438ms] [34;1m[rows:-][0m SELECT DATABASE()
-2023-03-16T14:37:34.707+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[97.282ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
-2023-03-16T14:37:34.798+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[90.815ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'ginchat' AND table_name = 'users' AND index_name = 'idx_users_deleted_at'
-2023-03-16T14:39:14.671+0800	DEBUG	utils/init_sysytem.go:73	Trying to hit GET request for www.sogo.com
-2023-03-16T14:39:14.684+0800	ERROR	utils/init_sysytem.go:76	Error fetching URL www.sogo.com : Error = Get "www.sogo.com": unsupported protocol scheme ""
-2023-03-16T14:39:14.684+0800	DEBUG	utils/init_sysytem.go:73	Trying to hit GET request for http://www.sogo.com
-2023-03-16T14:39:14.790+0800	INFO	utils/init_sysytem.go:78	Success! statusCode = 501 Not Implemented for URL http://www.sogo.com
-2023-03-16T14:39:15.155+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[39.842ms] [34;1m[rows:-][0m SELECT DATABASE()
-2023-03-16T14:39:15.242+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[85.852ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
-2023-03-16T14:39:15.332+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[89.653ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'ginchat' AND table_name = 'users' AND table_type = 'BASE TABLE'
-2023-03-16T14:39:15.381+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[48.692ms] [34;1m[rows:-][0m SELECT DATABASE()
-2023-03-16T14:39:15.471+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[89.216ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
-2023-03-16T14:39:15.521+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[49.775ms] [34;1m[rows:-][0m SELECT * FROM `users` LIMIT 1
-2023-03-16T14:39:15.622+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[99.827ms] [34;1m[rows:-][0m SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale , datetime_precision FROM information_schema.columns WHERE table_schema = 'ginchat' AND table_name = 'users' ORDER BY ORDINAL_POSITION
-2023-03-16T14:39:15.661+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[39.203ms] [34;1m[rows:-][0m SELECT DATABASE()
-2023-03-16T14:39:15.762+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[99.915ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
-2023-03-16T14:39:15.861+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[99.630ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'ginchat' AND table_name = 'users' AND index_name = 'idx_users_deleted_at'
-2023-03-16T14:44:31.150+0800	DEBUG	utils/init_sysytem.go:73	Trying to hit GET request for www.sogo.com
-2023-03-16T14:44:31.162+0800	ERROR	utils/init_sysytem.go:76	Error fetching URL www.sogo.com : Error = Get "www.sogo.com": unsupported protocol scheme ""
-2023-03-16T14:44:31.162+0800	DEBUG	utils/init_sysytem.go:73	Trying to hit GET request for http://www.sogo.com
-2023-03-16T14:44:31.297+0800	INFO	utils/init_sysytem.go:78	Success! statusCode = 501 Not Implemented for URL http://www.sogo.com
-2023-03-16T14:44:31.628+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[49.163ms] [34;1m[rows:-][0m SELECT DATABASE()
-2023-03-16T14:44:31.730+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[102.055ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
-2023-03-16T14:44:31.818+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[88.096ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'ginchat' AND table_name = 'users' AND table_type = 'BASE TABLE'
-2023-03-16T14:44:31.856+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[38.205ms] [34;1m[rows:-][0m SELECT DATABASE()
-2023-03-16T14:44:31.958+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[102.014ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
-2023-03-16T14:44:32.007+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[48.574ms] [34;1m[rows:-][0m SELECT * FROM `users` LIMIT 1
-2023-03-16T14:44:32.107+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[99.326ms] [34;1m[rows:-][0m SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale , datetime_precision FROM information_schema.columns WHERE table_schema = 'ginchat' AND table_name = 'users' ORDER BY ORDINAL_POSITION
-2023-03-16T14:44:32.141+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[33.245ms] [34;1m[rows:-][0m SELECT DATABASE()
-2023-03-16T14:44:32.228+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[86.353ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
-2023-03-16T14:44:32.305+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[77.126ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'ginchat' AND table_name = 'users' AND index_name = 'idx_users_deleted_at'
-2023-03-16T14:52:51.082+0800	DEBUG	utils/init_sysytem.go:73	Trying to hit GET request for www.sogo.com
-2023-03-16T14:52:51.093+0800	ERROR	utils/init_sysytem.go:76	Error fetching URL www.sogo.com : Error = Get "www.sogo.com": unsupported protocol scheme ""
-2023-03-16T14:52:51.093+0800	DEBUG	utils/init_sysytem.go:73	Trying to hit GET request for http://www.sogo.com
-2023-03-16T14:52:51.237+0800	INFO	utils/init_sysytem.go:78	Success! statusCode = 501 Not Implemented for URL http://www.sogo.com
-2023-03-16T14:52:51.617+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[50.828ms] [34;1m[rows:-][0m SELECT DATABASE()
-2023-03-16T14:52:51.707+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[89.833ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
-2023-03-16T14:52:51.784+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[76.954ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'ginchat' AND table_name = 'users' AND table_type = 'BASE TABLE'
-2023-03-16T14:52:51.822+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[37.692ms] [34;1m[rows:-][0m SELECT DATABASE()
-2023-03-16T14:52:51.928+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[105.331ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
-2023-03-16T14:52:51.977+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[48.604ms] [34;1m[rows:-][0m SELECT * FROM `users` LIMIT 1
-2023-03-16T14:52:52.077+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[99.465ms] [34;1m[rows:-][0m SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale , datetime_precision FROM information_schema.columns WHERE table_schema = 'ginchat' AND table_name = 'users' ORDER BY ORDINAL_POSITION
-2023-03-16T14:52:52.166+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[88.784ms] [34;1m[rows:0][0m ALTER TABLE `users` ADD `github_id` bigint unsigned
-2023-03-16T14:52:52.207+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[40.409ms] [34;1m[rows:-][0m SELECT DATABASE()
-2023-03-16T14:52:52.307+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[99.489ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
-2023-03-16T14:52:52.407+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[99.488ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'ginchat' AND table_name = 'users' AND index_name = 'idx_users_deleted_at'
-2023-03-16T14:56:13.274+0800	DEBUG	utils/init_sysytem.go:73	Trying to hit GET request for www.sogo.com
-2023-03-16T14:56:13.287+0800	ERROR	utils/init_sysytem.go:76	Error fetching URL www.sogo.com : Error = Get "www.sogo.com": unsupported protocol scheme ""
-2023-03-16T14:56:13.287+0800	DEBUG	utils/init_sysytem.go:73	Trying to hit GET request for http://www.sogo.com
-2023-03-16T14:56:13.420+0800	INFO	utils/init_sysytem.go:78	Success! statusCode = 501 Not Implemented for URL http://www.sogo.com
-2023-03-16T14:56:13.780+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[48.916ms] [34;1m[rows:-][0m SELECT DATABASE()
-2023-03-16T14:56:13.880+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[99.424ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
-2023-03-16T14:56:13.979+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[99.370ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'ginchat' AND table_name = 'users' AND table_type = 'BASE TABLE'
-2023-03-16T14:56:14.030+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[49.611ms] [34;1m[rows:-][0m SELECT DATABASE()
-2023-03-16T14:56:14.109+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[79.958ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
-2023-03-16T14:56:14.156+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[46.297ms] [34;1m[rows:-][0m SELECT * FROM `users` LIMIT 1
-2023-03-16T14:56:14.249+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[92.710ms] [34;1m[rows:-][0m SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale , datetime_precision FROM information_schema.columns WHERE table_schema = 'ginchat' AND table_name = 'users' ORDER BY ORDINAL_POSITION
-2023-03-16T14:56:14.299+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[49.863ms] [34;1m[rows:-][0m SELECT DATABASE()
-2023-03-16T14:56:14.399+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[99.275ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
-2023-03-16T14:56:14.499+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[99.150ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'ginchat' AND table_name = 'users' AND index_name = 'idx_users_deleted_at'
-2023-03-16T15:02:02.394+0800	DEBUG	utils/init_sysytem.go:73	Trying to hit GET request for www.sogo.com
-2023-03-16T15:02:02.405+0800	ERROR	utils/init_sysytem.go:76	Error fetching URL www.sogo.com : Error = Get "www.sogo.com": unsupported protocol scheme ""
-2023-03-16T15:02:02.405+0800	DEBUG	utils/init_sysytem.go:73	Trying to hit GET request for http://www.sogo.com
-2023-03-16T15:02:02.516+0800	INFO	utils/init_sysytem.go:78	Success! statusCode = 501 Not Implemented for URL http://www.sogo.com
-2023-03-16T15:02:02.856+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[41.651ms] [34;1m[rows:-][0m SELECT DATABASE()
-2023-03-16T15:02:02.941+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[84.593ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
-2023-03-16T15:02:03.047+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[105.677ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'ginchat' AND table_name = 'users' AND table_type = 'BASE TABLE'
-2023-03-16T15:02:03.095+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[47.886ms] [34;1m[rows:-][0m SELECT DATABASE()
-2023-03-16T15:02:03.197+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[101.376ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
-2023-03-16T15:02:03.256+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[58.765ms] [34;1m[rows:-][0m SELECT * FROM `users` LIMIT 1
-2023-03-16T15:02:03.356+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[99.319ms] [34;1m[rows:-][0m SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale , datetime_precision FROM information_schema.columns WHERE table_schema = 'ginchat' AND table_name = 'users' ORDER BY ORDINAL_POSITION
-2023-03-16T15:02:03.507+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[149.182ms] [34;1m[rows:9][0m ALTER TABLE `users` MODIFY COLUMN `github_id` longtext
-2023-03-16T15:02:03.554+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[46.791ms] [34;1m[rows:-][0m SELECT DATABASE()
-2023-03-16T15:02:03.634+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[79.979ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
-2023-03-16T15:02:03.727+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[92.898ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'ginchat' AND table_name = 'users' AND index_name = 'idx_users_deleted_at'
-2023-03-16T15:05:05.287+0800	DEBUG	utils/init_sysytem.go:73	Trying to hit GET request for www.sogo.com
-2023-03-16T15:05:05.299+0800	ERROR	utils/init_sysytem.go:76	Error fetching URL www.sogo.com : Error = Get "www.sogo.com": unsupported protocol scheme ""
-2023-03-16T15:05:05.299+0800	DEBUG	utils/init_sysytem.go:73	Trying to hit GET request for http://www.sogo.com
-2023-03-16T15:05:05.441+0800	INFO	utils/init_sysytem.go:78	Success! statusCode = 501 Not Implemented for URL http://www.sogo.com
-2023-03-16T15:05:05.820+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[39.040ms] [34;1m[rows:-][0m SELECT DATABASE()
-2023-03-16T15:05:05.891+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[70.162ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
-2023-03-16T15:05:05.991+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[100.579ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'ginchat' AND table_name = 'users' AND table_type = 'BASE TABLE'
-2023-03-16T15:05:06.041+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[49.816ms] [34;1m[rows:-][0m SELECT DATABASE()
-2023-03-16T15:05:06.131+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[89.577ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
-2023-03-16T15:05:06.180+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[48.838ms] [34;1m[rows:-][0m SELECT * FROM `users` LIMIT 1
-2023-03-16T15:05:06.280+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[99.879ms] [34;1m[rows:-][0m SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale , datetime_precision FROM information_schema.columns WHERE table_schema = 'ginchat' AND table_name = 'users' ORDER BY ORDINAL_POSITION
-2023-03-16T15:05:06.330+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[49.094ms] [34;1m[rows:-][0m SELECT DATABASE()
-2023-03-16T15:05:06.430+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[100.698ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
-2023-03-16T15:05:06.510+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
-[0m[33m[79.280ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'ginchat' AND table_name = 'users' AND index_name = 'idx_users_deleted_at'
+2023-03-18T23:43:21.259+0800	DEBUG	utils/init_sysytem.go:73	Trying to hit GET request for www.sogo.com
+2023-03-18T23:43:21.270+0800	ERROR	utils/init_sysytem.go:76	Error fetching URL www.sogo.com : Error = Get "www.sogo.com": unsupported protocol scheme ""
+2023-03-18T23:43:21.270+0800	DEBUG	utils/init_sysytem.go:73	Trying to hit GET request for http://www.sogo.com
+2023-03-18T23:43:21.417+0800	INFO	utils/init_sysytem.go:78	Success! statusCode = 501 Not Implemented for URL http://www.sogo.com
+2023-03-18T23:43:22.039+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[55.831ms] [34;1m[rows:-][0m SELECT DATABASE()
+2023-03-18T23:43:22.175+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[135.763ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
+2023-03-18T23:43:22.296+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[116.331ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'ginchat' AND table_name = 'users' AND table_type = 'BASE TABLE'
+2023-03-18T23:43:22.359+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[62.815ms] [34;1m[rows:-][0m SELECT DATABASE()
+2023-03-18T23:43:22.476+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[117.086ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
+2023-03-18T23:43:22.524+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[47.851ms] [34;1m[rows:-][0m SELECT * FROM `users` LIMIT 1
+2023-03-18T23:43:22.662+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[137.089ms] [34;1m[rows:-][0m SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale , datetime_precision FROM information_schema.columns WHERE table_schema = 'ginchat' AND table_name = 'users' ORDER BY ORDINAL_POSITION
+2023-03-18T23:43:22.717+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[54.513ms] [34;1m[rows:-][0m SELECT DATABASE()
+2023-03-18T23:43:22.840+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[122.557ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
+2023-03-18T23:43:22.949+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[108.086ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'ginchat' AND table_name = 'users' AND index_name = 'idx_users_deleted_at'
+2023-03-19T00:01:58.006+0800	DEBUG	utils/init_sysytem.go:73	Trying to hit GET request for www.sogo.com
+2023-03-19T00:01:58.017+0800	ERROR	utils/init_sysytem.go:76	Error fetching URL www.sogo.com : Error = Get "www.sogo.com": unsupported protocol scheme ""
+2023-03-19T00:01:58.017+0800	DEBUG	utils/init_sysytem.go:73	Trying to hit GET request for http://www.sogo.com
+2023-03-19T00:01:58.136+0800	INFO	utils/init_sysytem.go:78	Success! statusCode = 501 Not Implemented for URL http://www.sogo.com
+2023-03-19T00:01:58.631+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[70.224ms] [34;1m[rows:-][0m SELECT DATABASE()
+2023-03-19T00:01:58.745+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[112.767ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
+2023-03-19T00:01:58.854+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[108.813ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'ginchat' AND table_name = 'users' AND table_type = 'BASE TABLE'
+2023-03-19T00:01:58.905+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[50.207ms] [34;1m[rows:-][0m SELECT DATABASE()
+2023-03-19T00:01:59.013+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[107.984ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
+2023-03-19T00:01:59.070+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[57.101ms] [34;1m[rows:-][0m SELECT * FROM `users` LIMIT 1
+2023-03-19T00:01:59.198+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[127.421ms] [34;1m[rows:-][0m SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale , datetime_precision FROM information_schema.columns WHERE table_schema = 'ginchat' AND table_name = 'users' ORDER BY ORDINAL_POSITION
+2023-03-19T00:01:59.261+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[62.255ms] [34;1m[rows:-][0m SELECT DATABASE()
+2023-03-19T00:01:59.369+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[107.292ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
+2023-03-19T00:01:59.481+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[111.547ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'ginchat' AND table_name = 'users' AND index_name = 'idx_users_deleted_at'
+2023-03-19T00:05:14.582+0800	DEBUG	utils/init_sysytem.go:73	Trying to hit GET request for www.sogo.com
+2023-03-19T00:05:14.592+0800	ERROR	utils/init_sysytem.go:76	Error fetching URL www.sogo.com : Error = Get "www.sogo.com": unsupported protocol scheme ""
+2023-03-19T00:05:14.592+0800	DEBUG	utils/init_sysytem.go:73	Trying to hit GET request for http://www.sogo.com
+2023-03-19T00:05:14.785+0800	INFO	utils/init_sysytem.go:78	Success! statusCode = 501 Not Implemented for URL http://www.sogo.com
+2023-03-19T00:05:15.169+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[57.559ms] [34;1m[rows:-][0m SELECT DATABASE()
+2023-03-19T00:05:15.292+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[122.385ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
+2023-03-19T00:05:15.525+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[233.326ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'ginchat' AND table_name = 'users' AND table_type = 'BASE TABLE'
+2023-03-19T00:05:15.571+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[46.276ms] [34;1m[rows:-][0m SELECT DATABASE()
+2023-03-19T00:05:15.723+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[150.465ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
+2023-03-19T00:05:15.780+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[57.067ms] [34;1m[rows:-][0m SELECT * FROM `users` LIMIT 1
+2023-03-19T00:05:15.883+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[102.829ms] [34;1m[rows:-][0m SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale , datetime_precision FROM information_schema.columns WHERE table_schema = 'ginchat' AND table_name = 'users' ORDER BY ORDINAL_POSITION
+2023-03-19T00:05:15.935+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[50.850ms] [34;1m[rows:-][0m SELECT DATABASE()
+2023-03-19T00:05:16.039+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[104.625ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
+2023-03-19T00:05:16.140+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[100.642ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'ginchat' AND table_name = 'users' AND index_name = 'idx_users_deleted_at'
+2023-03-19T00:08:15.495+0800	DEBUG	utils/init_sysytem.go:73	Trying to hit GET request for www.sogo.com
+2023-03-19T00:08:15.505+0800	ERROR	utils/init_sysytem.go:76	Error fetching URL www.sogo.com : Error = Get "www.sogo.com": unsupported protocol scheme ""
+2023-03-19T00:08:15.505+0800	DEBUG	utils/init_sysytem.go:73	Trying to hit GET request for http://www.sogo.com
+2023-03-19T00:08:15.637+0800	INFO	utils/init_sysytem.go:78	Success! statusCode = 501 Not Implemented for URL http://www.sogo.com
+2023-03-19T00:08:16.004+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[45.080ms] [34;1m[rows:-][0m SELECT DATABASE()
+2023-03-19T00:08:16.101+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[96.150ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
+2023-03-19T00:08:16.200+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[98.879ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'ginchat' AND table_name = 'users' AND table_type = 'BASE TABLE'
+2023-03-19T00:08:16.240+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[40.075ms] [34;1m[rows:-][0m SELECT DATABASE()
+2023-03-19T00:08:16.320+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[79.641ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
+2023-03-19T00:08:16.361+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[41.025ms] [34;1m[rows:-][0m SELECT * FROM `users` LIMIT 1
+2023-03-19T00:08:16.450+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[88.404ms] [34;1m[rows:-][0m SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale , datetime_precision FROM information_schema.columns WHERE table_schema = 'ginchat' AND table_name = 'users' ORDER BY ORDINAL_POSITION
+2023-03-19T00:08:16.489+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[39.201ms] [34;1m[rows:-][0m SELECT DATABASE()
+2023-03-19T00:08:16.595+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[104.314ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
+2023-03-19T00:08:16.740+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[145.471ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'ginchat' AND table_name = 'users' AND index_name = 'idx_users_deleted_at'
+2023-03-19T00:14:01.661+0800	DEBUG	utils/init_sysytem.go:73	Trying to hit GET request for www.sogo.com
+2023-03-19T00:14:01.672+0800	ERROR	utils/init_sysytem.go:76	Error fetching URL www.sogo.com : Error = Get "www.sogo.com": unsupported protocol scheme ""
+2023-03-19T00:14:01.672+0800	DEBUG	utils/init_sysytem.go:73	Trying to hit GET request for http://www.sogo.com
+2023-03-19T00:14:01.831+0800	INFO	utils/init_sysytem.go:78	Success! statusCode = 501 Not Implemented for URL http://www.sogo.com
+2023-03-19T00:14:02.270+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[42.211ms] [34;1m[rows:-][0m SELECT DATABASE()
+2023-03-19T00:14:02.367+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[95.838ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
+2023-03-19T00:14:02.457+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[89.583ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'ginchat' AND table_name = 'users' AND table_type = 'BASE TABLE'
+2023-03-19T00:14:02.497+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[39.784ms] [34;1m[rows:-][0m SELECT DATABASE()
+2023-03-19T00:14:02.575+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[77.721ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
+2023-03-19T00:14:02.615+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[38.812ms] [34;1m[rows:-][0m SELECT * FROM `users` LIMIT 1
+2023-03-19T00:14:02.715+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[99.885ms] [34;1m[rows:-][0m SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale , datetime_precision FROM information_schema.columns WHERE table_schema = 'ginchat' AND table_name = 'users' ORDER BY ORDINAL_POSITION
+2023-03-19T00:14:02.754+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[38.916ms] [34;1m[rows:-][0m SELECT DATABASE()
+2023-03-19T00:14:02.832+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[77.939ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
+2023-03-19T00:14:02.922+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[89.941ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'ginchat' AND table_name = 'users' AND index_name = 'idx_users_deleted_at'
+2023-03-19T00:14:25.133+0800	DEBUG	utils/init_sysytem.go:73	Trying to hit GET request for www.sogo.com
+2023-03-19T00:14:25.143+0800	ERROR	utils/init_sysytem.go:76	Error fetching URL www.sogo.com : Error = Get "www.sogo.com": unsupported protocol scheme ""
+2023-03-19T00:14:25.143+0800	DEBUG	utils/init_sysytem.go:73	Trying to hit GET request for http://www.sogo.com
+2023-03-19T00:14:25.258+0800	INFO	utils/init_sysytem.go:78	Success! statusCode = 501 Not Implemented for URL http://www.sogo.com
+2023-03-19T00:14:25.629+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[38.463ms] [34;1m[rows:-][0m SELECT DATABASE()
+2023-03-19T00:14:25.720+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[90.909ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
+2023-03-19T00:14:25.818+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[97.801ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'ginchat' AND table_name = 'users' AND table_type = 'BASE TABLE'
+2023-03-19T00:14:25.858+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[39.663ms] [34;1m[rows:-][0m SELECT DATABASE()
+2023-03-19T00:14:25.983+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[125.349ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
+2023-03-19T00:14:26.029+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[45.462ms] [34;1m[rows:-][0m SELECT * FROM `users` LIMIT 1
+2023-03-19T00:14:26.114+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[84.423ms] [34;1m[rows:-][0m SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale , datetime_precision FROM information_schema.columns WHERE table_schema = 'ginchat' AND table_name = 'users' ORDER BY ORDINAL_POSITION
+2023-03-19T00:14:26.167+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[52.392ms] [34;1m[rows:-][0m SELECT DATABASE()
+2023-03-19T00:14:26.269+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[100.441ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
+2023-03-19T00:14:26.378+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[109.063ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'ginchat' AND table_name = 'users' AND index_name = 'idx_users_deleted_at'
+2023-03-19T00:19:34.767+0800	DEBUG	utils/init_sysytem.go:73	Trying to hit GET request for www.sogo.com
+2023-03-19T00:19:34.777+0800	ERROR	utils/init_sysytem.go:76	Error fetching URL www.sogo.com : Error = Get "www.sogo.com": unsupported protocol scheme ""
+2023-03-19T00:19:34.777+0800	DEBUG	utils/init_sysytem.go:73	Trying to hit GET request for http://www.sogo.com
+2023-03-19T00:19:34.920+0800	INFO	utils/init_sysytem.go:78	Success! statusCode = 501 Not Implemented for URL http://www.sogo.com
+2023-03-19T00:19:35.280+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[41.511ms] [34;1m[rows:-][0m SELECT DATABASE()
+2023-03-19T00:19:35.352+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[71.682ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
+2023-03-19T00:19:35.436+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[84.278ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'ginchat' AND table_name = 'users' AND table_type = 'BASE TABLE'
+2023-03-19T00:19:35.471+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[34.281ms] [34;1m[rows:-][0m SELECT DATABASE()
+2023-03-19T00:19:35.540+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[67.453ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
+2023-03-19T00:19:35.584+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[44.072ms] [34;1m[rows:-][0m SELECT * FROM `users` LIMIT 1
+2023-03-19T00:19:35.659+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[74.944ms] [34;1m[rows:-][0m SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale , datetime_precision FROM information_schema.columns WHERE table_schema = 'ginchat' AND table_name = 'users' ORDER BY ORDINAL_POSITION
+2023-03-19T00:19:35.710+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[50.420ms] [34;1m[rows:-][0m SELECT DATABASE()
+2023-03-19T00:19:35.799+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[89.145ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
+2023-03-19T00:19:35.878+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[78.951ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'ginchat' AND table_name = 'users' AND index_name = 'idx_users_deleted_at'
+2023-03-19T00:25:16.986+0800	DEBUG	utils/init_sysytem.go:73	Trying to hit GET request for www.sogo.com
+2023-03-19T00:25:16.996+0800	ERROR	utils/init_sysytem.go:76	Error fetching URL www.sogo.com : Error = Get "www.sogo.com": unsupported protocol scheme ""
+2023-03-19T00:25:16.996+0800	DEBUG	utils/init_sysytem.go:73	Trying to hit GET request for http://www.sogo.com
+2023-03-19T00:25:17.109+0800	INFO	utils/init_sysytem.go:78	Success! statusCode = 501 Not Implemented for URL http://www.sogo.com
+2023-03-19T00:25:17.455+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[52.169ms] [34;1m[rows:-][0m SELECT DATABASE()
+2023-03-19T00:25:17.558+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[102.695ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
+2023-03-19T00:25:17.639+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[80.914ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'ginchat' AND table_name = 'users' AND table_type = 'BASE TABLE'
+2023-03-19T00:25:17.689+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[49.081ms] [34;1m[rows:-][0m SELECT DATABASE()
+2023-03-19T00:25:17.764+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[74.471ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
+2023-03-19T00:25:17.800+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[35.107ms] [34;1m[rows:-][0m SELECT * FROM `users` LIMIT 1
+2023-03-19T00:25:17.889+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[89.726ms] [34;1m[rows:-][0m SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale , datetime_precision FROM information_schema.columns WHERE table_schema = 'ginchat' AND table_name = 'users' ORDER BY ORDINAL_POSITION
+2023-03-19T00:25:17.938+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[48.614ms] [34;1m[rows:-][0m SELECT DATABASE()
+2023-03-19T00:25:18.025+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[84.799ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
+2023-03-19T00:25:18.111+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[86.101ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'ginchat' AND table_name = 'users' AND index_name = 'idx_users_deleted_at'
+2023-03-19T00:26:00.369+0800	DEBUG	utils/init_sysytem.go:73	Trying to hit GET request for www.sogo.com
+2023-03-19T00:26:00.379+0800	ERROR	utils/init_sysytem.go:76	Error fetching URL www.sogo.com : Error = Get "www.sogo.com": unsupported protocol scheme ""
+2023-03-19T00:26:00.379+0800	DEBUG	utils/init_sysytem.go:73	Trying to hit GET request for http://www.sogo.com
+2023-03-19T00:26:00.468+0800	INFO	utils/init_sysytem.go:78	Success! statusCode = 501 Not Implemented for URL http://www.sogo.com
+2023-03-19T00:26:00.841+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[38.663ms] [34;1m[rows:-][0m SELECT DATABASE()
+2023-03-19T00:26:00.932+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[91.532ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
+2023-03-19T00:26:01.012+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[79.370ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'ginchat' AND table_name = 'users' AND table_type = 'BASE TABLE'
+2023-03-19T00:26:01.062+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[48.947ms] [34;1m[rows:-][0m SELECT DATABASE()
+2023-03-19T00:26:01.161+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[99.454ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
+2023-03-19T00:26:01.200+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[38.465ms] [34;1m[rows:-][0m SELECT * FROM `users` LIMIT 1
+2023-03-19T00:26:01.296+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[96.047ms] [34;1m[rows:-][0m SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale , datetime_precision FROM information_schema.columns WHERE table_schema = 'ginchat' AND table_name = 'users' ORDER BY ORDINAL_POSITION
+2023-03-19T00:26:01.351+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[54.756ms] [34;1m[rows:-][0m SELECT DATABASE()
+2023-03-19T00:26:01.442+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[90.588ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
+2023-03-19T00:26:01.536+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[94.677ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'ginchat' AND table_name = 'users' AND index_name = 'idx_users_deleted_at'
+2023-03-19T00:28:39.441+0800	DEBUG	utils/init_sysytem.go:73	Trying to hit GET request for www.sogo.com
+2023-03-19T00:28:39.452+0800	ERROR	utils/init_sysytem.go:76	Error fetching URL www.sogo.com : Error = Get "www.sogo.com": unsupported protocol scheme ""
+2023-03-19T00:28:39.452+0800	DEBUG	utils/init_sysytem.go:73	Trying to hit GET request for http://www.sogo.com
+2023-03-19T00:28:39.581+0800	INFO	utils/init_sysytem.go:78	Success! statusCode = 501 Not Implemented for URL http://www.sogo.com
+2023-03-19T00:28:39.942+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[44.849ms] [34;1m[rows:-][0m SELECT DATABASE()
+2023-03-19T00:28:40.022+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[80.172ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
+2023-03-19T00:28:40.120+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[98.318ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'ginchat' AND table_name = 'users' AND table_type = 'BASE TABLE'
+2023-03-19T00:28:40.173+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[52.781ms] [34;1m[rows:-][0m SELECT DATABASE()
+2023-03-19T00:28:40.251+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[77.469ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
+2023-03-19T00:28:40.300+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[49.282ms] [34;1m[rows:-][0m SELECT * FROM `users` LIMIT 1
+2023-03-19T00:28:40.380+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[78.792ms] [34;1m[rows:-][0m SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale , datetime_precision FROM information_schema.columns WHERE table_schema = 'ginchat' AND table_name = 'users' ORDER BY ORDINAL_POSITION
+2023-03-19T00:28:40.430+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[48.805ms] [34;1m[rows:-][0m SELECT DATABASE()
+2023-03-19T00:28:40.530+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[100.343ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
+2023-03-19T00:28:40.630+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[100.115ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'ginchat' AND table_name = 'users' AND index_name = 'idx_users_deleted_at'
+2023-03-19T00:31:28.984+0800	DEBUG	utils/init_sysytem.go:73	Trying to hit GET request for www.sogo.com
+2023-03-19T00:31:28.993+0800	ERROR	utils/init_sysytem.go:76	Error fetching URL www.sogo.com : Error = Get "www.sogo.com": unsupported protocol scheme ""
+2023-03-19T00:31:28.993+0800	DEBUG	utils/init_sysytem.go:73	Trying to hit GET request for http://www.sogo.com
+2023-03-19T00:31:29.147+0800	INFO	utils/init_sysytem.go:78	Success! statusCode = 501 Not Implemented for URL http://www.sogo.com
+2023-03-19T00:31:29.520+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[47.738ms] [34;1m[rows:-][0m SELECT DATABASE()
+2023-03-19T00:31:29.618+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[97.987ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
+2023-03-19T00:31:29.689+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[71.019ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'ginchat' AND table_name = 'users' AND table_type = 'BASE TABLE'
+2023-03-19T00:31:29.726+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[37.020ms] [34;1m[rows:-][0m SELECT DATABASE()
+2023-03-19T00:31:29.829+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[102.331ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
+2023-03-19T00:31:29.879+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[49.794ms] [34;1m[rows:-][0m SELECT * FROM `users` LIMIT 1
+2023-03-19T00:31:29.968+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[89.090ms] [34;1m[rows:-][0m SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale , datetime_precision FROM information_schema.columns WHERE table_schema = 'ginchat' AND table_name = 'users' ORDER BY ORDINAL_POSITION
+2023-03-19T00:31:30.032+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[63.748ms] [34;1m[rows:-][0m SELECT DATABASE()
+2023-03-19T00:31:30.146+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[113.540ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
+2023-03-19T00:31:30.246+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[99.591ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'ginchat' AND table_name = 'users' AND index_name = 'idx_users_deleted_at'
+2023-03-19T00:46:21.637+0800	DEBUG	utils/init_sysytem.go:73	Trying to hit GET request for www.sogo.com
+2023-03-19T00:46:21.647+0800	ERROR	utils/init_sysytem.go:76	Error fetching URL www.sogo.com : Error = Get "www.sogo.com": unsupported protocol scheme ""
+2023-03-19T00:46:21.647+0800	DEBUG	utils/init_sysytem.go:73	Trying to hit GET request for http://www.sogo.com
+2023-03-19T00:46:21.766+0800	INFO	utils/init_sysytem.go:78	Success! statusCode = 501 Not Implemented for URL http://www.sogo.com
+2023-03-19T00:46:22.115+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[39.896ms] [34;1m[rows:-][0m SELECT DATABASE()
+2023-03-19T00:46:22.191+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[75.121ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
+2023-03-19T00:46:22.264+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[73.413ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.tables WHERE table_schema = 'ginchat' AND table_name = 'users' AND table_type = 'BASE TABLE'
+2023-03-19T00:46:22.318+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[52.316ms] [34;1m[rows:-][0m SELECT DATABASE()
+2023-03-19T00:46:22.403+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[84.754ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
+2023-03-19T00:46:22.449+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[45.547ms] [34;1m[rows:-][0m SELECT * FROM `users` LIMIT 1
+2023-03-19T00:46:22.556+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[106.111ms] [34;1m[rows:-][0m SELECT column_name, column_default, is_nullable = 'YES', data_type, character_maximum_length, column_type, column_key, extra, column_comment, numeric_precision, numeric_scale , datetime_precision FROM information_schema.columns WHERE table_schema = 'ginchat' AND table_name = 'users' ORDER BY ORDINAL_POSITION
+2023-03-19T00:46:22.599+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[43.373ms] [34;1m[rows:-][0m SELECT DATABASE()
+2023-03-19T00:46:22.676+0800	INFO	logger/logger.go:180	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[75.498ms] [34;1m[rows:1][0m SELECT SCHEMA_NAME from Information_schema.SCHEMATA where SCHEMA_NAME LIKE 'ginchat%' ORDER BY SCHEMA_NAME='ginchat' DESC,SCHEMA_NAME limit 1
+2023-03-19T00:46:22.765+0800	INFO	logger/logger.go:178	[32mE:/GoProjects/my-projects/websocket-IM/utils/init_sysytem.go:103
+[0m[33m[89.452ms] [34;1m[rows:-][0m SELECT count(*) FROM information_schema.statistics WHERE table_schema = 'ginchat' AND table_name = 'users' AND index_name = 'idx_users_deleted_at'

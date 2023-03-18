@@ -113,4 +113,9 @@ func InitRedis() {
 		PoolSize:     viper.GetInt("redis.poolSize"),
 		MinIdleConns: viper.GetInt("redis.minIdleConn"),
 	})
+	_, err := common.RDB.Ping(common.CTX).Result()
+	if err != nil {
+		return
+	}
+	fmt.Println("redis连接成功")
 }

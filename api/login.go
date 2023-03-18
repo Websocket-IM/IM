@@ -64,7 +64,7 @@ func LoginByPhone(c *gin.Context) {
 		return
 	}
 	if len(users) > 0 {
-		fmt.Println("该github用户已经存在")
+		fmt.Println("该手机号用户已经存在")
 		user = users[0]
 	} else {
 		user, err = service.LoginByPhoneCode(&loginByphonecode)

@@ -9,7 +9,7 @@ import (
 func Route() *gin.Engine {
 	r := gin.Default()
 	r.GET("/index", api.GetIndex)
-	//用户模块
+	//登录模块
 	user := r.Group("/user")
 	{
 		user.POST("/getUserList", api.GetUserList)
@@ -25,7 +25,14 @@ func Route() *gin.Engine {
 	r.POST("/token", utils.JWTAuthMiddleware(), func(context *gin.Context) {
 		context.JSON(200, "success")
 	})
+	// github第三方登录
 	r.GET("/auth/login/github", api.HandleGithubLogin)
 	r.GET("/auth/callback/github", api.HandleGithubCallback)
+	// 消息模块
+	message := r.Group("message")
+	{
+		message.GET("/send", api.SendMessage)
+
+	}
 	return r
 }
