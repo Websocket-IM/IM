@@ -100,7 +100,7 @@ func InitMysql() {
 		fmt.Println("连接mysql数据库成功")
 	}
 	// 迁移 schema
-	db.AutoMigrate(&model.User{})
+	db.AutoMigrate(&model.User{}, &model.Message{}, &model.Contact{}, &model.Group{})
 	common.DB = db
 }
 

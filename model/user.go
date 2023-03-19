@@ -7,8 +7,8 @@ import (
 
 type User struct {
 	gorm.Model
-	Username      string
-	Password      string
+	Username      string // 用户名
+	Password      string // 密码
 	Nickname      string
 	Phone         string `valid:"phone"`
 	Email         string `valid:"email"`
@@ -23,6 +23,7 @@ type User struct {
 	LoginOutTime  time.Time `gorm:"column:login_out_time" json:"login_out_time"`
 	IsLogout      bool
 	DeviceInfo    string
+	Groups        []*Group `gorm:"many2many:user_groups;"`
 }
 
 // 注册用户
